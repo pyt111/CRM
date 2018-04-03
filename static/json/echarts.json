@@ -1,0 +1,105 @@
+[ 
+    {
+        "value": 15,
+        "name": "普通用户",
+        "path": "普通用户",
+        "itemStyle": {
+            "normal": {
+                "color":" #3BD0DD"
+                }
+            }
+    },
+    {
+        "value": 15,
+        "name": "员工",
+        "path": "员工",
+        "itemStyle": {
+            "normal": {
+                "color":"#FFB600"
+                }
+            }
+        
+    },{
+        "value": 20,
+        "name": "代理商",
+        "path": "代理商",
+        "itemStyle": {
+            "normal": {
+                "color":" #F3A34E"
+                }
+            },
+        "children": [
+            {
+                "value": 5,
+                "name": "铜牌代理商",
+                "path": "代理商/铜牌代理商"
+            },           
+            {
+                "value": 8,
+                "name": "银牌代理商",
+                "path": "代理商/银牌代理商"
+            },           
+            {
+                "value": 13,
+                "name": "金牌代理商",
+                "path": "代理商/金牌代理商"
+            }
+        ]
+    },{
+        "value": 30,
+        "name": "理财师",
+        "path": "理财师",
+        "itemStyle": {
+            "normal": {
+                "color":" #61B0FD"
+                }
+            },
+        "children": [
+            {
+                "value": 20,
+                "name": "一级理财师",
+                "path": "理财师/一级理财师"
+            },           
+            {
+                "value": 70,
+                "name": "二级理财师",
+                "path": "理财师/二级理财师"
+            },           
+            {
+                "value": 10,
+                "name": "三级理财师",
+                "path": "理财师/三级理财师"
+            }
+        ]
+    },{
+        "value": 20,
+        "name": "会员",
+        "path": "会员",
+        "itemStyle": {
+            "normal": {
+                "color":" #E85D70"
+                }
+            },
+        "children": [
+            {
+                "value": 10,
+                "name": "一级会员",
+                "path": "会员/一级会员"
+            
+            },           
+            {
+                "value": 10,
+                "name": "二级会员",
+                "path": "会员/二级会员"
+               
+                
+            }
+        ]
+    }
+    
+    
+
+  
+    
+    
+]

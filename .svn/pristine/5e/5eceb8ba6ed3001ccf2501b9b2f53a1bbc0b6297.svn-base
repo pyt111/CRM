@@ -1,0 +1,214 @@
+<template>
+    <div class="system_mian">
+		<div class="system">
+		    <p>推广配置</p>
+		</div>
+		<div class="system_body" style="width:80%;margin-left:10%;margin-top:20px;" >
+			<Row :gutter="16">
+			<!-- 方法一 -->
+				<Col  span="6">
+					<div class="system_phone">
+					    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/phone1.png"/>
+						<p style="margin-top:20px;font-size:16px;font-weight:600">方法一:代理邀请码</p>
+						<p style="margin-top:20px;">
+						   <Input style="width:70%;"  v-model="value1" size="small" placeholder="请输入..."></Input>
+						</p >
+						<p style="margin-top:20px;">
+						    <Button style="width:70%;"  
+							        size="small" 
+									long 
+									v-clipboard:copy="value1"
+                                    v-clipboard:success="onCopy"
+									v-clipboard:error="onError">
+							复制</Button>
+						</p>
+						<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
+					</div>
+				</Col>
+				<!-- 方法二 -->
+				<Col span="6">
+					<div class="system_phone">
+					    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/msg3.png"/>
+						<p style="margin-top:20px;font-size:16px;font-weight:600">方法二:推广链接邀请</p>
+						<p style="margin-top:20px;">
+						   <Input style="width:70%;"  v-model="value2" size="small" placeholder="请输入..."></Input>
+						</p >
+						<p style="margin-top:20px;">
+						    <Button style="width:70%;"  
+							        size="small" 
+									long 
+									v-clipboard:copy="value2"
+                                    v-clipboard:success="onCopy"
+									v-clipboard:error="onError">
+							复制</Button>
+						</p>
+						<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友点击您发送的以上邀请码链接完成注册，您与好友的推荐关系成功</p>
+					</div>
+				</Col>
+				<!-- 方法三 -->
+				<Col span="6">
+					<div class="system_phones">
+					    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht1.png"/>
+						<p style="margin-top:20px;color:#000;font-size:16px;font-weight:600">方法三:微信邀请</p>
+							<div id="qrcode"></div>
+						<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">扫一扫分享至朋友圈</p>
+					</div>
+				</Col>
+				<!-- 短信邀请 -->
+				<Col span="6">
+					<div class="system_phone">
+					    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht2.png"/>
+						<p style="margin-top:20px;color:#000;font-size:16px">方法四:短信邀请</p>
+						<p style="margin-top:20px;">
+						   <Input style="width:70%"  v-model="value2" size="small" placeholder="请输入..."></Input>
+						</p >
+						<p style="margin-top:20px;width:80%;margin-left:15%">
+						    <Row >
+							   <Col span="14" >
+							       <Input  v-model="value3" size="small" placeholder="好友手机号"></Input>
+							   </Col>
+							   <Col span="2">
+							       <Button  size="small" type="info" @click="send">发送</Button>
+								</Col>
+							</Row>
+						</p>
+						<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
+					</div>
+				</Col>
+			</Row>
+		</div>
+    </div>
+</template>
+<script>
+// import axios from 'axios'
+import $ from 'jquery'
+import QRCode  from 'qrcodejs2'
+// import qs from 'qs'
+export default {
+       
+        data () {
+            return {
+				value1:'', 
+				value2:'',
+				value3:'',
+				value4:''
+            }
+            
+        },
+        methods: {
+			Axios(){
+				let data = {
+					userId:this.$store.getters.uid
+				}
+                this.loading = true;			
+				this.post(BASE_URL +'/Agent/PopularizeManage/v1/popularizeSetting',
+					data
+					)
+					.then(reponse=>{
+						this.loading = false;
+						var res = reponse.result;
+						this.value1 = res.popularizeCode
+						this.value2 = res.popularizeUrl;
+						this.qrcode() ;
+					})
+					.catch(error=>{
+						this.$Message.error(error.message)
+						//alert('网络错误')
+					})
+			},
+			Axioss(){
+				var params = new URLSearchParams()
+				let data = {
+					userId:this.$store.getters.uid,
+					phone:this.value3,
+					popularizeUrl:this.value2
+				}
+                this.loading = true;			
+				this.post(BASE_URL +'/Agent/PopularizeManage/v1/sendSmsPopularize',
+					data
+					)
+					.then(reponse=>{
+						this.loading = false;
+						var res = reponse.result;
+						console.log(res)
+						this.$Message.success(reponse.message)
+					})
+					.catch(error=>{
+						this.$Message.error(error.message)
+						//alert('网络错误')
+					})
+			},
+            onCopy(e){
+				console.log(e.text);
+			},
+			onError(e){
+				console.log(e)
+			},
+			send(){
+				var popularizeUrl = this.value2;
+				var phone = this.value3;
+				this.Axioss()
+			},
+			qrcode () {  
+				var url = this.value2.substr(this.value2.indexOf('http'))
+				let qrcode = new QRCode('qrcode', {  
+					width: 100,  
+					height: 100, // 高度  
+					text: url // 二维码内容  
+				})  
+				console.log(qrcode)  
+				} 
+		},
+		mounted(){
+			this.Axios();
+		},
+    }
+</script>
+
+<style scoped>
+	.system_mian{
+		border-top: 3px solid #48A2FE; 
+		background-color: #ffffff;
+		padding: 20px;
+		height:600px;
+		border-radius: 5px;
+		
+	}
+   .system{
+	   height: 60px;
+	   width: 100%;
+	   border-bottom: 1px solid #ccc
+   }
+   .system p{
+       border-bottom:2px solid #40A9FF;
+       font-weight: 700;
+	   font-size: 18px;
+       padding:10px;
+       line-height: 70px;
+       width:96px;
+       height: 60px;
+   }
+   .system_body{
+	  width:100%;
+	   background-color:#F5F9FC;
+   }
+   .system_phone{
+	   text-align:center;
+	   padding:10px;
+	   margin: auto
+   }
+   .system_phones{
+	   width: 200px;
+	   text-align:center;
+	   padding:10px;
+   }
+   #qrcode{
+	   width: 100px;
+	   margin-top: 20px;
+	   margin-left: 40px;
+   }
+</style>
+<style>
+
+</style>
+

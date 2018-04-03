@@ -1,0 +1,38 @@
+import asd from 'utils/fetch';
+import qs from 'qs'
+
+export function loginByEmail(userName, passWord) {
+  // console.log(userName,passWord);
+  const data = {
+    userName:userName,
+    passWord:passWord
+  };
+  // console.log(data);
+  return asd({
+    //  url: 'http://192.168.1.30:8091/app2/index/test.do',
+    url:process.env.BASE_API + '/agent/login',
+    method: 'post',
+    data:qs.stringify(data)
+    // params:{userName:userName,passWord:passWord}
+  });
+}
+
+export function logout() {
+  return asd({
+    url: '/login/logout',
+    method: 'post'
+  });
+}
+
+export function getInfo(token) {
+  let data = {
+    token
+  }
+  return asd({
+    url: process.env.BASE_API + '/agent/getInfo',
+    method: 'post',
+    data:qs.stringify(data)
+  });
+}
+
+export default {}

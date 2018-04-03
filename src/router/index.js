@@ -1,0 +1,271 @@
+import Vue from 'vue';
+import Router from 'vue-router';
+
+const _import = require('./_import_' + process.env.NODE_ENV);
+import Full from '@/containers/Full'
+import Full2 from '@/containers/Full2'
+
+import Buttons from '@/views/components/Buttons'
+
+// Views - Pages
+import Page404 from '@/views/errorPages/Page404'
+import Page500 from '@/views/errorPages/Page500'
+
+
+/* login */
+const Login = _import('login/index');
+Vue.use(Router);
+
+export const constantRouterMap = [
+	{ path: '/login', component: Login, hidden: true },
+	{
+		path: '/pages', redirect: '/pages/p404', name: 'Pages',
+		component: {
+			render(c) { return c('router-view') }
+			// Full,
+		},
+		children: [{ path: '404', name: 'Page404', component: _import('errorPages/Page404') },
+		{ path: '500', name: 'Page500', component: _import('errorPages/Page404') },
+		]
+	}
+
+
+]
+
+export default new Router({
+	mode: 'hash',
+	linkActiveClass: 'open active',
+	scrollBehavior: () => ({ y: 0 }),
+	routes: constantRouterMap
+});
+
+export const asyncRouterMap = [
+
+	{
+		path: '/',
+		redirect: '/kanban',
+		name: '首页',
+		component: Full,
+		hidden: false,
+		children: [
+			{
+				path: '/kanban',name: '看板',icon: 'android-home',component: _import('kanban'),	
+			},
+			// 老板
+			{
+				path: '/generalGanager/CamManage',name: '业绩管理',icon: 'pie-graph',component: _import('generalGanager/CamManage'),
+				meta: { role: 'admins' }
+			},
+			{
+				path: '/generalGanager/crews',name: '维护员管理',icon: 'android-person',component: _import('generalGanager/crews'),
+				meta: { role: 'admins' }
+			},
+			{
+				path: '/generalGanager/customer',
+				name: '客户管理', 
+				icon: 'ios-people',
+				redirect: '/generalGanager/customer/customer',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'admins' },
+				children: [
+					{path: 'customer',name: '客户信息',component: _import('generalGanager/customer/customer'),hidden: false},
+					{path: 'InvestmentTracking',name: '投资跟踪',component: _import('generalGanager/customer/InvestmentTracking')}, 
+				]
+			},
+			{
+				path: '/generalGanager/systemLog',
+				name: '系统配置',
+				icon: 'gear-b',
+				redirect: '/generalGanager/systemLog/system',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'admins' },
+				children: [
+				   {path: 'system',name: '提成配置',component: _import('generalGanager/systemLog/system'),hidden: false},
+				   {path: 'propertySet',name: '属性配置',component: _import('generalGanager/systemLog/property/propertySet'),hidden: false},
+				]
+			},
+            // 团队经理
+			{
+				path: '/teamManager/Cam',name: '业绩管理',icon: 'pie-graph',component: _import('teamManager/Cam'),
+				meta: { role: 'editor' }
+			},
+			{
+				path: '/teamManager/crews',name: '维护员管理',icon: 'android-person',component: _import('teamManager/crews'),
+			    meta: { role: 'editor' }
+			},
+			{
+				path: '/teamManager/customer',
+				name: '客户管理',
+				icon: 'ios-people',
+				redirect: '/teamManager/customer/customer',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'editor' },
+				children: [
+					{path: 'customer',name: '客户信息',component: _import('teamManager/customer/customer'),hidden: false},
+					{path: 'InvestmentTracking',name: '投资跟踪',component: _import('teamManager/customer/InvestmentTracking'),hidden: false}, 
+				]
+			},
+			// 理财师
+			{
+				path: '/financial/customer',
+				name: '商户管理',
+				icon: 'ios-people',
+				redirect: '/financial/customer/customer',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'financial' },
+				children: [
+					{path: 'customer',name: '客户信息',component: _import('financial/customer/customer'),hidden: false},
+					{path: 'InvestmentTracking',name: '分润跟踪',component: _import('financial/customer/InvestmentTracking'),hidden: false}, 
+				]
+			},
+			// 业务员
+			{
+				path: '/salesman/customer',
+				name: '客户管理',
+				icon: 'ios-people',
+				redirect: '/salesman/customer/customer',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'salesman' },
+				children: [
+					{path: 'customer',name: '客户信息',component: _import('salesman/customer/customer'),hidden: false},
+					{path: 'InvestmentTracking',name: '投资统计',component: _import('salesman/customer/InvestmentTracking'),hidden: false}, 
+				]
+			},
+			// 经销商
+			{
+				path: '/agent/customer',
+				name: '子商户管理',
+				icon: 'ios-people',
+				redirect: '/agent/customer/customer',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'agent' },
+				children: [
+					{path: 'customer',name: '子商户信息',component: _import('agent/customer/customer'),hidden: false},
+					{path: 'InvestmentTracking',name: '投资统计',component: _import('agent/customer/InvestmentTracking'),hidden: false},
+					{path: 'operationLog',name: '子商户日志',component: _import('agent/customer/operationLog'),hidden: false}, 
+				]
+			},
+			{
+				path: '/agent/popularize',
+				name: '推广管理',
+				icon: 'speakerphone',
+				redirect: '/agent/popularize/popularizeSet',
+				component: {
+					render(c) {
+						return c('router-view')
+					}
+				},
+				meta: { role: 'agent' },
+				children: [
+					{path: 'popularizeSet',name: '推广设置',component: _import('agent/popularize/popularizeSet'),hidden: false,},
+					{path: 'popularizeEarnings',name: '推广收益明细',component: _import('agent/popularize/popularizeEarnings'),hidden: false,},
+					{path: 'popularizeTi',name: '推广提现明细',component: _import('agent/popularize/popularizeTi'),hidden: false,},
+					 
+				]
+			},
+			{
+				path: '/TiLog',name: '提现明细',icon: 'ios-paper',component: _import('agent/TiLog'),
+			    meta: { role: 'agent' }
+			},{
+				path: '/oneSelf',name: '个人中心',icon: 'speedometer',component: _import('agent/oneSelf'),
+				meta: { role: 'agent' },
+				hidden: true
+			} ,
+			// 公用
+			{
+				path: '/teamManager/operationLog',name: '操作日志',icon: 'document-text',component: _import('teamManager/operationLog'),
+			    meta: { role: ['editor','financial','salesman'] }
+			}
+			// ,{
+			// 	path: '/oneSelf',name: '个人中心',icon: 'speedometer',component: _import('oneSelf'),
+			// 	hidden: true,
+			// 	meta: { role: ['editor','financial','salesman'] }
+			// } 
+			// ,{
+			// 	path: '/caogao',name: 'caogao',icon: 'speedometer',component: _import('caogao'),
+				
+			// }
+		// {
+		// 		path: '/board',
+		// 		name: '看板ssss',
+		// 		icon: 'thumbsup',
+		// 		redirect: '/board/dataManage',
+		// 		component: {
+		// 			render(c) {
+		// 				return c('router-view')
+		// 			}
+		// 		},
+		// 		children: [
+		// 			{path: 'dataManage',name: '数据管理',component: _import('board/dataManage'),hidden: false},
+		// 		    {path: 'dataOperational',name: '运营数据',component: _import('board/dataOperational')},
+		// 			{path: 'webStats',name: '网站统计',component: _import('board/webStats')},
+		// 			{path: 'list',name: 'list',component: _import('board/list'),hidden: true}
+		// 		]
+	
+		// 	},
+			
+			// {
+			// 	path: '/components',
+			// 	name: 'component组件',
+			// 	redirect: '/components/buttons',
+			// 	icon: 'bookmark',
+			// 	component: { render(c) { return c('router-view') } },
+			// 	children: [
+			// 		{ path: 'buttons', name: 'Buttons按钮', icon: 'social-youtube', component: _import('components/Buttons'), hidden: false },
+					
+			// 		{ path: 'card', name: 'Card卡片', icon: 'ios-browsers-outline', component: _import('components/Card') },
+					
+			// 		{ path: 'modal', name: 'Modal对话框', icon: 'ios-chatbubble-outline', component: _import('components/Modal')},
+			// 		{ path: 'select', name: 'Select选择器', icon: 'ios-arrow-down', component: _import('components/Select'), meta: { role: ['admin', 'editor'] } },
+					
+			// 		{ path: 'spin', name: 'Spin加载中', icon: 'load-d ', component: _import('components/Spin'), meta: { role: ['admin', 'editor'] } },
+					
+			// 		{ path: 'steps', name: 'Steps步骤条', icon: 'ios-checkmark-outline', component: _import('components/Steps'), meta: { role: ['admin', 'editor'] } },
+					
+			// 		{ path: 'transfer', name: 'Transfer穿梭框', icon: 'ios-pause-outline', component: _import('components/Transfer'), meta: { role: ['admin'] } },
+			// 		{ path: 'timepicker', name: 'Timepicker', icon: 'ios-clock-outline', component: _import('components/Timepicker'), meta: { role: ['admin'] } },
+			// 		{ path: 'upload', name: 'Upload上传', icon: 'ios-cloud-upload-outline', component: _import('components/Upload'), meta: { role: ['admin'] } },
+			// 	]
+			// },
+			// {
+			// 	path: '/userModule',
+			// 	name: '用户模块',
+			// 	redirect: '/userModule/userList',
+			// 	icon: 'android-person',
+			// 	component: { render(c) { return c('router-view') } },
+			// 	children: [
+			// 		{ path: 'userList', name: '用户列表M', icon: 'android-people', component: _import('userModule/userList') },
+			// 		{ path: 'chartsM', name: 'chartsM', icon: 'android-people', component: _import('visualDataModule/chartsM') },
+			// 		{ path: 'basicsTable', name: 'table模板', icon: 'android-people', component: _import('userModule/user') }
+			// 	]
+			// }
+
+		]
+	},
+	{ path: '*', redirect: '/pages/404', hidden: true }
+
+];

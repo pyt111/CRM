@@ -1,0 +1,33 @@
+<template>
+<div>
+<!-- 　　//观察数据为字符串或数组 -->
+　　 <input v-model="example0"/>
+　　 <input v-model="example1"/>
+
+</div>
+</template>
+<script>
+　　 export default {
+　　　　　　data(){
+　　　　　　　　return {
+　　　　　　　　　　example0:"",
+　　　　　　　　　　example1:"",
+　　　　　　　　　　example2:{
+　　　　　　　　　　　　inner0:1,
+　　　　　　　　　　　　innner1:2
+　　　　　　　　　　}
+　　　　　　　　}
+　　　　　　},
+　　　　　　watch:{
+　　　　　　　　example0(curVal,oldVal){
+　　　　　　　　　　console.log(curVal,oldVal);
+　　　　　　　　},
+　　　　　　　　example1:'a',//值可以为methods的方法名
+　　　　　　},
+　　　　　　methods:{
+　　　　　　　　a(curVal,oldVal){
+// 　　　　　　　　　　conosle.log(curVal,oldVal)
+　　　　　　　　}
+　　　　　　}
+    }
+</script>

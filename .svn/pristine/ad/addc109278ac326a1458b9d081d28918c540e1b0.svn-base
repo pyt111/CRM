@@ -1,0 +1,271 @@
+<template>
+	<div class="animated fadeIn">
+		<!-- 老板 -->
+		<div v-if="token=='admins'">
+			<Row :gutter="16">
+				<Col span="24">	
+					<shouye-three></shouye-three>	
+				</Col>			
+			</Row>
+			<Row :gutter="16" >
+				<Col span="24" >	
+					<shouye-eleven></shouye-eleven>	
+				</Col>	 
+			</Row>
+			<Row :gutter="16" >
+				<Col span="12">	
+					<shouye-eight></shouye-eight>	
+				</Col>
+				<Col span="12">	
+					<shouye-one></shouye-one>	
+				</Col>	
+			</Row>
+		</div>
+		<!-- 团队经理 -->
+		<div v-if="token=='editor'">
+		    <Row :gutter="16">
+				<Col span="24">	
+					<shouye-three></shouye-three>	
+				</Col>			
+			</Row>
+			<Row :gutter="16" >
+				<Col span="12" >	
+					<shouye-four></shouye-four>	
+				</Col>	
+				<Col span="12" >	
+					<shouye-five></shouye-five>	
+				</Col> 
+			</Row>
+			<Row :gutter="16" >
+				<Col span="12">	
+					<shouye-six></shouye-six>	
+				</Col>
+				<Col span="12">	
+					<shouye-one></shouye-one>	
+				</Col>	 
+			</Row>
+		</div>
+		<!-- 理财师 业务员-->
+		<div v-if="token=='financial'||token=='salesman'">
+			<Row :gutter="16">
+				<Col span="24">	
+					<shouye-three></shouye-three>	
+				</Col>			
+			</Row>
+			<Row :gutter="16" >
+				<Col span="12" >	
+					<shouye-nine v-if="token=='financial'"></shouye-nine>	
+				</Col>	
+				<Col span="12" v-if="token=='salesman'">	
+					<shouye-seven></shouye-seven>	
+				</Col> 
+				<Col span="12" >	
+					<shouye-five></shouye-five>	
+				</Col> 
+				
+			</Row>
+			<Row :gutter="16" >
+				
+				<Col span="24" v-if="token=='financial'">	
+					<shouye-ten></shouye-ten>	
+				</Col>	 
+				<Col span="24" v-if="token=='salesman'">	
+					<shouye-six></shouye-six>	
+				</Col>
+			</Row>
+		</div>
+		<!-- 代理商 -->
+		<div v-if="token=='agent'">
+		    <Row :gutter="16">
+				<Col span="24">	
+					<agent-four></agent-four>	
+				</Col>			
+			</Row>
+			<Row :gutter="16" >
+				<Col span="12" >	
+					<agent-three ></agent-three>	
+				</Col>	
+				<Col span="12" >	
+					<agent-one></agent-one>	
+				</Col> 
+				
+			</Row>
+			<Row :gutter="16" >
+				<Col >	
+					<agent-two></agent-two>	
+				</Col>
+			</Row>
+		</div>
+		
+	</div>
+</template>
+
+<script>
+	import axios from 'axios';
+	import ShouyeThree from './shouye/ShouyeThree'
+	import ShouyeEleven from './shouye/ShouyeEleven'
+	import ShouyeEight from './shouye/ShouyeEight'
+	import ShouyeSix from './shouye/ShouyeSix'
+	import ShouyeOne from './shouye/ShouyeOne'
+	import ShouyeTwo from './shouye/ShouyeTwo'
+	import ShouyeFour from './shouye/ShouyeFour'
+	import ShouyeFive from './shouye/ShouyeFive'
+	import ShouyeSeven from './shouye/ShouyeSeven'
+	import ShouyeNine from './shouye/ShouyeNine'
+	import ShouyeTen from './shouye/ShouyeTen'
+	// 代理商
+    import agentOne from './agent/home/agentOne'
+	import agentTwo from './agent/home/agentTwo'
+	import agentThree from './agent/home/agentThree'
+	import agentFour from './agent/home/agentFour'
+	const end = new Date()
+    const start = new Date()
+	export default {
+	    
+		name: 'dashboard',
+		components: {
+			ShouyeThree,
+			ShouyeEleven,
+			ShouyeEight,
+			ShouyeOne,
+			ShouyeFour,
+			ShouyeFive,
+			ShouyeSix,
+            ShouyeSeven,
+			ShouyeNine,
+			ShouyeTen,
+			// 代理商
+            agentOne,
+			agentTwo,
+			agentThree,
+			agentFour
+
+		},
+		data() {
+			return {
+				speed: 10000,
+				token:'',
+				span:''
+			}
+		}, 
+		mounted() {
+		  
+			
+		},
+		created(){			
+			const token = this.$store.getters.roles[0];
+			this.token = token;
+			console.log(this.$route.params)
+			// if(this.token=='admin'){
+			// 	this.span=12
+			// }
+		}
+		
+	}
+</script>
+
+<style type="text/css" scoped>
+/*查询*/
+    .search{
+		display: block;
+		width: 100%;
+		padding: 8px;
+		background-color: #FFFFFF;
+	}
+	.top{
+		float: left;
+	}
+	.header{
+		float: left;		
+	}
+	.header_span{
+        display: block;
+        width: 80px;
+        float: left;	    
+		margin-left: 10px;
+	}
+	.today {
+		background: #3DB1F3;
+		color: #FFFFFF;
+		
+	}
+/*成功提现总金额*/
+.succss{
+	border-bottom: 2px solid #dcdcdc;
+	height: 30px;
+}
+.succss_one{
+	height: 40px;
+	
+	line-height: 40px;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+
+/*原来的*/
+
+	
+	/* .state-overview .state-value .value {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 5px
+	}
+	
+	.state-overview .state-value .title {
+		font-size: 14px
+	} */
+	
+	.state-value {
+		width: 60%;
+		display: inline-block
+	}
+		.ivu-row {
+		margin-bottom: 20px!important
+	}
+	.panel.purple {
+		background: #6a8abe;
+		box-shadow: 0 5px 0 #5f7cab
+	}
+	
+	.panel.red {
+		background-color: #fc8675;
+		box-shadow: 0 5px 0 #e27869
+	}
+	
+	.panel.blue {
+		background: #5ab6df;
+		box-shadow: 0 5px 0 #51a3c8
+	}
+	
+	.panel.green {
+		background: #4acacb;
+		box-shadow: 0 5px 0 #42b5b6
+	}
+    .state-info{
+		display: block;
+		border: 1px solid red
+	}
+	
+	.state-info .panel {
+		margin-bottom: 20px;
+		float: left;
+		margin-left: 15px;
+		border: 1px solid red
+	}
+	
+	.panel {
+		background-color: #fff;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+	}
+	
+	.panel-body {
+		padding: 10px;
+		text-align: center;
+		background-color: #ffffff
+	}
+	
+</style>

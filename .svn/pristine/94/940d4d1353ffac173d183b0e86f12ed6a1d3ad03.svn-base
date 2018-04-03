@@ -1,0 +1,298 @@
+<template>
+<div>
+    <!-- <Row class="succss" :gutter="16"> -->
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1" >
+                    <span class="succss1_p">月度业绩</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">￥{{result.thisSaleCount}}
+                           <span style="font-size:12px;color:#ccc"> 元</span>
+                        </p>
+                        <p >上月业绩：{{result.lastSaleCount}}元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/money.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">月度提成</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">￥{{result.thisSaleAchieve}}<span style="font-size:12px;color:#ccc"> 元</span></p>
+                        <p >上月提成:{{result.lastSaleAchieve}} 元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/up.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">月度新增用户</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">{{result.thisMonthCount}}<span style="font-size:12px;color:#ccc"> 人</span></p>
+                        <p >总维护用户:{{result.userCount}} 人</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/user.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">可提现金额</span>
+                    <p class="succss1_p1" @click="tixian">提现</p>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">{{result.achieveIsNotClose}}<span style="font-size:12px;color:#ccc"> 元</span></p>
+                        <p >已提成:{{result.achieveIsClose}} 元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/jin.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+         <!-- 提成提现 -->
+        <Modal  v-model="modal" width="500" :styles="{top: '200px'}" :mask-closable="false">
+          <p slot="header" style="color:#2db7f5">
+            <span>业绩提现</span>
+          </p>
+          <Form  label-position="top" ref="modals" :model="modals" >
+            <div>
+              <Row :gutter="16">
+                <Col span="24" >
+                <div class="tiBank">
+                    <div class="tiBank_one">
+                       <img style="width:30px;height:30px;margin-top:5px" :src="modals.img" alt="">
+                       <p style="margin-left:15px">{{modals.bankName}}</p>
+                       <p style="margin-left:15px">尾号：{{modals.bankNumber}}</p>
+                    </div>
+                    <div style="margin-right:15px">单笔最大金额：{{modals.everyPrice}}</div>
+                </div>
+                </Col>
+                <Col span="24" style="margin-top:20px">
+                  <div style="display:flex;">
+                    <p style="flex:1">可提现金额： <span style="color:red">{{modals.userBalance}}</span> 元</p>
+                    <Button type="primary" size="small"  style="margin-left: 8px" @click="modalsAll">全部提现</Button>
+                  </div>
+                </Col>
+                <Col span="24" style="margin-top:20px">
+                  <FormItem label="提现金额：">
+                    <Input  v-model="allUserBalance" ></Input>
+                    <p>手续费：本次提现收取<span style="color:red">{{modals.poundage}}</span>元</p>
+                  </FormItem>
+                </Col>
+              </Row>
+              <Row style="text-align:center;margin-bottom:-30px">
+                <Col span="24" >
+                  <FormItem>
+                    <Button type="primary" @click="modalsOk('modals')">确定</Button>
+                    <Button type="ghost" @click="modalsNo('modals')" style="margin-left: 8px">取消</Button>
+                  </FormItem>
+                </Col>
+              </Row>
+            </div>
+          </Form>
+            <div slot="footer" style="display:none">
+            </div>
+        </Modal>
+    <!-- </Row> -->
+    </div>
+</template>
+<script>
+   import axios from 'axios';
+   export default{
+       data(){
+           return {
+               msg:'123',
+               result:'',
+               // 提成提现
+                allUserBalance:'',
+                modal: false,
+                modals: {
+                    one:'',
+                    bankName: '10,000',
+                    bankNumber: "",
+                    everyPrice:'',
+                    img:'',
+                    poundage:'',
+                    userBalance:''
+                },
+           }
+           
+       },
+       methods:{
+           tichengAxios() {
+                // console.log(this.userId)
+                let data = {
+                    userId: this.userId,
+                    type:1,
+                };
+                this.loading = true;
+                this.post(process.env.BASE_API + "/agent/commWithdrawalConditions", data).then(
+                    reponse => {
+                    this.loading = false;
+                    let res = reponse.result.dataList;
+                    this.modals = res;
+                    this.modals.bankNumber = res.bankNumber.slice(-4)
+                    // console.log(reponse.result.dataList)
+                    // this.$message.info(reponse.data.message)
+                    }
+                ).catch(err => {
+                    console.log(err);
+                    this.$Message.error(err.message)
+                });
+                },
+                tixian() {
+                this.modal = true;
+                this.tichengAxios()
+                },
+                modalsAll(){
+                    this.allUserBalance = this.modals.userBalance;
+                    //  console.log(this.modals.one)
+                },
+                // 提成提现确认接口
+                tichengAxiosOk() {
+                // console.log(this.userId)
+                let data = {
+                    money:this.allUserBalance,
+                    userId: this.userId,
+                    isAgentId:this.userId,
+                    
+                };
+                this.loading = true;
+                this.post(process.env.BASE_API + "/agent/commWithdrawalConditions", data).then(
+                    reponse => {
+                    this.loading = false;
+                    console.log(reponse.code)
+                    if(reponse.code == 0){
+                    this.$Message.success("提现成功");
+                        setTimeout(()=>{
+                        this.modal = false;
+                        this.allUserBalance = ''
+                        },1000)
+                        
+                    }else{
+                    //this.$Message.success(reponse.message)
+                    } 
+                    }
+                ).catch(err => {
+                    console.log(err);
+                    this.$Message.error(err.message)
+                });
+            },
+             modalsAll(){
+                 this.allUserBalance = this.modals.userBalance;
+                    //  console.log(this.modals.one)
+                },
+             modalsOk() {
+                this.tichengAxiosOk();
+            },
+            modalsNo() {
+                this.modal = false;
+                this.allUserBalance = ''
+             },
+       },
+       mounted(){
+            let params = {
+                userName:this.$store.getters.userName
+            } 
+               this.get(process.env.BASE_API + '/agent/panel',params
+                      )
+					.then(reponse=>{
+                        var res = reponse.result
+                        this.result = res
+						// console.log(res)
+					})
+					.catch(error=>{
+						//alert('网络错误')
+					})
+           },
+        created(){
+                this.userId = this.$store.getters.uid;
+            }
+   }
+</script>
+<style scoped>
+.succss{
+    
+    width:100%;
+}
+.suc{
+    background-color: #ffffff;
+    height: 120px;
+}
+.succss1{
+    display: flex;
+    padding:10px;
+}
+.succss1_p{
+    flex:1;
+    text-align:40px;
+    color:#ccc
+}
+.succss1_p1{
+    height: 20px;
+    color: #ffffff;
+    width: 50px;
+    background-color: #40A7FD;
+    border-radius: 5px;
+    text-align:center;
+    cursor: pointer;
+}
+.succss1_p1:hover{
+    background-color: #3DB1F3;
+}
+.succss2{
+    display: flex;
+    padding:10px;
+}
+.succss2_div{
+    flex:1
+}
+.succss2_div1{
+    font-size:18px;
+    font-weight:700;
+}
+img{
+    height:45px
+}
+.hr{
+    height:1px;
+    width:96%;
+    border:none;
+    margin-left: 2%;
+    border-top:2px solid #EDEEF2;
+}
+.tiBank{
+  display: flex;
+  line-height: 40px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+}
+.tiBank_one{
+  flex: 1;
+  display: flex;
+  padding-left: 10px;
+}
+</style>

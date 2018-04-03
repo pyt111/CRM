@@ -1,0 +1,9 @@
+module.exports = {
+    NODE_ENV: '"development"',
+    // BASE_API: '"//192.168.1.24"',//朕
+    // BASE_API: '"//192.168.1.158"',//呵呵
+    // BASE_API: '"//192.168.1.20:8080"',//春春
+    BASE_API: '"//192.168.1.75:8080"',//祝祝
+    // BASE_API: '"//crm.v2.yhb118.com"',
+    APP_ORIGIN: '"https://wz.com"'
+}

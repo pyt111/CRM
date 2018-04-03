@@ -1,0 +1,153 @@
+<template>
+<div>
+    <Row class="succss" :gutter="16">
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1" >
+                    <span class="succss1_p">月度业绩</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">￥{{result.thisSaleCount}}
+                           <span style="font-size:12px;color:#ccc"> 元</span>
+                        </p>
+                        <p >上月业绩：{{result.lastSaleCount}}元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/money.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">月度提成</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">￥{{result.thisSaleAchieve}}<span style="font-size:12px;color:#ccc"> 元</span></p>
+                        <p >上月提成:{{result.lastSaleAchieve}} 元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/up.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">月度新增用户</span>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">{{result.thisMonthCount}}<span style="font-size:12px;color:#ccc"> 人</span></p>
+                        <p >总维护用户:{{result.userCount}} 人</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/user.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+        <Col span="6">
+            <div class="suc">
+                <div class="succss1">
+                    <span class="succss1_p">可提现金额</span>
+                    <p class="succss1_p1">提现</p>
+                </div>
+                <hr class="hr"/>
+                <div class="succss2">
+                <div class="succss2_div">
+                        <p class="succss2_div1">{{result.thisSaleCount}}<span style="font-size:12px;color:#ccc"> 元</span></p>
+                        <p >已提成:{{result.thisSaleCount}} 元</p>
+                    </div>
+                    <div>
+                    <img src="../../../../static/img/shouye/jin.png"/>
+                    </div>
+                </div>
+            </div>
+        </Col>
+    </Row>
+    </div>
+</template>
+<script>
+   import axios from 'axios';
+   export default{
+       data(){
+           return {
+               msg:'123',
+               result:''
+           }
+           
+       },
+       mounted(){
+               axios.get('http://192.168.1.75:8080/agent/panel?userName=18066809969'
+                      )
+					.then(reponse=>{
+                        var res = reponse.data.result
+                        this.result = res
+						// console.log(res)
+					})
+					.catch(error=>{
+						alert('网络错误')
+					})
+           }
+   }
+</script>
+<style scoped>
+.succss{
+    
+    width:100%;
+}
+.suc{
+    background-color: #ffffff;
+    height: 120px;
+}
+.succss1{
+    display: flex;
+    padding:10px;
+}
+.succss1_p{
+    flex:1;
+    text-align:40px;
+    color:#ccc
+}
+.succss1_p1{
+    height: 20px;
+    color: #ffffff;
+    width: 50px;
+    background-color: #40A7FD;
+    border-radius: 5px;
+    text-align:center;
+    cursor: pointer;
+}
+.succss1_p1:hover{
+    background-color: #3DB1F3;
+}
+.succss2{
+    display: flex;
+    padding:10px;
+}
+.succss2_div{
+    flex:1
+}
+.succss2_div1{
+    font-size:18px;
+    font-weight:700;
+}
+img{
+    height:45px
+}
+.hr{
+    height:1px;
+    width:96%;
+    border:none;
+    margin-left: 2%;
+    border-top:2px solid #EDEEF2;
+}
+</style>

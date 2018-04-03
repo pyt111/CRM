@@ -1,0 +1,257 @@
+<template>
+	<div class="mian">
+
+		<div class="age">
+			新增用户/企业
+		</div>
+		<hr style="height:1px;border:none;border-top:1px solid #0066CC;" />
+        <div class="map">
+		   <chart :options="option" class="echarts" id="cakechart"></chart>
+	    </div>
+        <div style="width: 40%;float:left;">
+			<div style="height: 80px;margin-top:50px">
+                <div class="one">
+                    <p class="licai" style="background-color: #61B0FD;"></p>
+                    <p class="licai1">理财师</p>
+                </div>
+                <div class="one">
+                    <p class="licai" style="background-color: #E85D70;"></p>
+                    <p class="licai1">会员</p>
+                </div>
+                <div class="one">
+                    <p class="licai" style="background-color: #F3A34E;"></p>
+                    <p class="licai1">代理商</p>
+                </div>
+                <div class="one">
+                    <p class="licai" style="background-color:#FFB600;"></p>
+                    <p class="licai1">员工</p>
+                </div>
+                <div class="one">
+                    <p class="licai" style="background-color:#3BD0DD;"></p>
+                    <p class="licai1">普通用户</p>
+                </div>
+            </div>
+			<Table :columns="columns1" :data="data1"></Table>
+		</div>
+
+	</div>
+</template>
+<script>
+	import echarts from 'echarts'
+	import axios from 'axios';
+    var formatUtil = echarts.format;
+	 function getLevelOption() {
+        return [
+            {
+                itemStyle: {
+                    normal: {
+                        borderWidth: 1,
+                        gapWidth: 5
+                    }
+                }
+            },
+            {
+                itemStyle: {
+                    normal: {
+                        gapWidth: 1
+                    }
+                }
+            },
+            {
+                colorSaturation: [0.35, 0.5],
+                itemStyle: {
+                    normal: {
+                        gapWidth: 1,
+                        borderColorSaturation: 0.6
+                    }
+                }
+            }
+        ];
+    }
+	export default {
+        data () {
+            return {
+            	 option: {
+                        title: {
+                            text: '新增用户/企业',
+                            left: 'center'
+                        },
+            	 	    legend: {
+                            data: ['普通用户','员工','代理商','理财师','会员'],
+                            left: 'left',
+                            bottom: 10
+                        },
+
+                        tooltip: {
+                            formatter: function (info) {
+                                var value = info.value;
+                                var treePathInfo = info.treePathInfo;
+                                var treePath = [];
+
+                                for (var i = 1; i < treePathInfo.length; i++) {
+                                    treePath.push(treePathInfo[i].name);
+                                }
+
+                                return [
+                                    '<div class="tooltip-title">' + formatUtil.encodeHTML(treePath.join(': ')) + '</div>',
+                                    '<div class="tooltip-value"> ' + formatUtil.addCommas(value) + '%'+ '</div>',
+                                ].join('');
+                            }
+                        },
+
+                        series: [
+                            {
+                                name:'新增用户/企业',
+                                type:'treemap',
+                                visibleMin:1000,
+                                label: {
+                                    show: true,
+                                    formatter: '{b}'
+                                },
+                                itemStyle: {
+                                    normal: {
+                                        borderColor: '#fff'
+                                    }
+                                },
+                                levels: getLevelOption(),
+                                data:'',
+
+                            }
+                        ]
+                    },
+                    columns1: [{
+						title: '',
+						key: 'scope',
+						align: 'center'
+					},
+					{
+						title: '会员',
+						key: 'demand',
+						align: 'center'
+					},
+					{
+						title: '经销商',
+						key: 'thirty',
+						align: 'center'
+					},
+					{
+						title: '理财师',
+						key: 'ninety',
+						align: 'center'
+					},
+					{
+						title: '员工',
+						key: 'oneHundred',
+						align: 'center'
+					},
+					{
+						title: '用户',
+						key: 'threeHundred',
+						align: 'center'
+					}
+				  ],
+				data1: [{
+						scope: '投资用户',
+						demand: '3000',
+						thirty: '333',
+						ninety: '1555',
+						oneHundred: '1555',
+						threeHundred: '12121'
+						
+
+					},
+					{
+						scope: '投资金额',
+						demand: '3000',
+						thirty: '333',
+						ninety: '1555',
+						oneHundred: '1555',
+						threeHundred: '12121'
+						
+					},
+					{
+						scope: '总金额占比',
+						demand: '10%',
+						thirty: '10%',
+						ninety: '10%',
+						oneHundred: '10%',
+						threeHundred: '10%'
+					}
+				]
+            	}
+      },
+      watch:{
+        
+      },
+      mounted(){			
+			this.loading = true;
+			
+			axios.get('http://192.168.1.24:9009/static/echarts.json')
+			.then(reponse=>{
+                
+				this.loading = false;
+                this.option.series[0].data=reponse.data;
+                
+                // for(let i = 0;i<reponse.data.length;i++){
+                //          console.log(i);
+                // }
+                
+			})
+			.catch(error=>{
+				alert('网络错误首页12')
+			})
+			
+		}
+       
+    }
+</script>
+<style scoped>
+	.mian {
+		height: 500px;
+		background-color: #FFFFFF;
+		padding: 10px;
+        width: 100%;
+	}
+	
+	.age {
+		height: 40px;
+		padding: 10px;
+		font-weight: 700;
+		border-bottom: 2px;
+	}
+	
+	.list {
+		text-align: center;
+		margin-top: 20px;
+	}
+	
+	.progress {
+		margin-top: 10px;
+		color: rgba(0, 89, 255, 0.582)
+	}
+    .map{
+        float: left;
+        width: 60%;
+    }
+    /* .one{
+        margin-top: 80px;
+    } */
+    .licai{
+        margin-left: 10px;
+        margin-top: 5px;
+        width: 30px;
+        height: 20px;
+        float: left;
+    }
+    .licai1{
+        margin-left: 2px;
+         width: 50px;
+        height: 30px;
+        float: left;
+        font-size: 12px;
+        line-height: 30px
+    }
+    .tooltip-value{
+        border: 1px solid red
+    }
+</style>

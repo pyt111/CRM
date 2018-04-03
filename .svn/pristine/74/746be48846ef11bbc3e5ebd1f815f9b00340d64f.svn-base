@@ -1,0 +1,4 @@
+
+export const BASE_API= '//crm.v2.yhb118.com';
+
+

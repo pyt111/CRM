@@ -1,0 +1,73 @@
+
+
+
+$sms:767px;
+$smd:768px;
+$md:992px;
+$lg:1200px;
+
+@mixin sm() {
+    .ivu-col{
+        margin: .3125rem 0;
+    }
+    .ivu-col:last-child{
+        background-attachment: fixed;
+    }
+    .searchBtn{
+        margin: .9rem auto 1rem;
+        display: block;
+        width: 100%;
+        height: 2.5rem;
+        font-size: .875rem;
+    }
+    
+}
+
+@mixin md() {
+    .ivu-col,.searchBtn{
+        margin:0 .3125rem .625rem .3125rem; 
+    }
+    .searchBtn{
+        position: absolute;
+        right: 1.25rem;
+        top: 0;
+    }
+    
+}
+@mixin lg() {
+    .ivu-col{
+        margin: .625rem .9375rem .9375rem 0 ; 
+    }
+    .searchBtn{
+        position: absolute;
+        right: 2rem;
+        top: 0;
+        margin: .625rem 0 .9375rem 0 ;
+    }
+   
+}
+
+
+@mixin inputList() {
+    // @if $size == xsm {
+        @media only screen and (max-width:$sms) {
+           @include sm();
+        }
+    // }
+    // @else if $size == xmd {
+        @media only screen and (min-width:$smd) and (max-width:$lg) {
+            @include md();
+        }
+    // }@else if $size == dmd {
+        // @media only screen and (min-width:$md) and(max-width:$lg) {
+        //     @include md();
+        // }
+    // }
+    // @else if $size == dlg {
+        @media only screen and (min-width:$lg) {
+            @include lg();
+        }
+    // }
+}
+
+

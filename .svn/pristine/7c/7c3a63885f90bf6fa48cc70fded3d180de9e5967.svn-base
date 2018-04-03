@@ -1,0 +1,372 @@
+<template>
+	<div class="zhan_mian">
+		<div ref="mian">
+			<Row>
+				<Col :span="5">
+				<span>来源用户：</span>
+				<Input v-model="childUsername" placeholder="请输入..." style="width: 100px" size="small"></Input>
+				</Col>
+				<Col :span="8">
+				<span>时间搜索：</span>
+				<DatePicker type="daterange" :v-model="options1" :options="options2" size="small" placement="bottom-start" placeholder="请选择日期" style="width: 200px" format="yyyy-MM-dd" @on-change="dataChange"></DatePicker>
+				</Col>
+				<Col :span="2">
+				<Button type="info" size="small" icon="ios-search" @click="check('formInline')">搜索</Button>
+				</Col>
+			</Row>
+			<Row :gutter="16" style="margin-top:20px">
+				<Col :span="4">
+				<span>收益总额：</span>
+				<span style="color:	#EEB422">{{achieveSum}}元</span>
+				</Col>
+				<Col :span="4">
+				<span>已提取：</span>
+				<span style="color:	#EEB422">{{achieveClose}}元</span>
+				</Col>
+				<Col :span="4">
+				<span>收益余额：</span>
+				<span style="color:	#EEB422">{{achieveNotClose}}元</span>
+				</Col>
+				<Col :span="2">
+				<Button size="small" @click="extract">提现</Button>
+				</Col>
+			</Row>
+			<Row class="table">
+				<Col :span="24">
+				<Table :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
+				<div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
+									align-items: center;
+									justify-content: center;background: rgba(210, 216, 222, 0.5);" v-if="loading">
+					<Spin size="large"></Spin>
+					<h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
+				</div>
+				</Col>
+				<Col :span="8" style="margin-top: 10px;" class="page">
+				<p>共{{dataCount}}记录，每页显示{{pageSize}}条，共{{Math.ceil(dataCount/pageSize)}}页</p>
+				</Col>
+				<Col :span="16" class="pageP" style="text-align: right;margin-top: 10px;">
+				<!-- @on-change="setInitPage" -->
+				<Page :total="dataCount" :current="1" show-sizer show-elevator :page-size-opts="array" :page-size="pageSize" @on-change="changepage" @on-page-size-change="pageChange">
+				</Page>
+				</Col>
+			</Row>
+		</div>
+		<!-- 提现 -->
+		<Modal v-model="modal" width="250" :styles="{top: '200px'}" :mask-closable="false">
+			<p slot="header" style="color:#2db7f5">
+				<span>收益提现</span>
+			</p>
+			<Form label-position="top" ref="modals" :model="modals">
+				<div>
+					<Row :gutter="16">
+						<Col span="24">
+						<FormItem label="可提取金额：">
+							<Input v-model="modals.one">
+							<span slot="append">元</span>
+							</Input>
+						</FormItem>
+						</Col>
+						<Col span="24">
+						<FormItem label="提取银行卡：">
+							<Input v-model="modals.two"></Input>
+						</FormItem>
+						</Col>
+						<Col span="24">
+						<FormItem label="提现金额：">
+							<Input v-model="modals.three">
+							<span slot="append">元</span>
+							</Input>
+						</FormItem>
+						</Col>
+					</Row>
+					<Row style="text-align:center;margin-bottom:-30px">
+						<Col span="24">
+						<FormItem>
+							<Button type="primary" @click="handleSubmit1('modals')">确定</Button>
+							<Button type="ghost" @click="handleReset('modals')" style="margin-left: 8px">取消</Button>
+						</FormItem>
+						</Col>
+					</Row>
+				</div>
+			</Form>
+			<div slot="footer" style="display:none">
+			</div>
+		</Modal>
+	</div>
+</template>
+
+
+<script>
+import axios from "axios";
+export default {
+    data() {
+        return {
+            loading: false,
+            branch: "",
+			addr: "",
+			achieveSum:'', //收益总额
+			achieveClose:'',//已提取
+			achieveNotClose:'',//收益余额
+            options1: [],
+			Input: "",
+			childUsername:'',
+            pageSize: 12,
+            valueDate: "",
+            selItem: [],
+            ajaxHistoryData: [],
+            array: [12, 14, 18],
+            // 初始化信息总条数
+            dataCount: 0,
+            // 模块提现
+            modal: false,
+            modals: {
+                one: "",
+                two: "",
+                three: ""
+            },
+            options2: {
+                shortcuts: [
+                    {
+                        text: "周",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 7
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "月",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 30
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "季",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 90
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "年",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 360
+                            );
+                            return [start, end];
+                        }
+                    }
+                ]
+            },
+            columns1: [
+                {
+                    title: "收益类型",
+                    key: "state",
+                    align: "center"
+                },
+                {
+                    title: "收益时间",
+                    key: "signTime",
+                    align: "center"
+                },
+                {
+                    title: "收益金额",
+                    key: "shareMoney",
+                    align: "center"
+                },
+                {
+                    title: "来源用户",
+                    key: "trueName",
+                    align: "center"
+                }
+            ],
+            data1: [],
+            page: 1
+        };
+    },
+    mounted() {},
+    methods: {
+        selChange(sel) {
+            this.selItem = sel;
+        },
+        check() {
+            // console.log(this.Input);
+            // console.log(this.addr);
+			// console.log(this.options1);
+			this.Axios()
+        },
+        dataChange(event) {
+            // console.log(event);
+			this.options1 = event;
+			// console.log(this.options1);
+        },
+        Axios() {
+			this.loading = true;
+			// console.log(this.options1);
+			// console.log(this.$store.getters.uid);
+			let data = {
+				userId:this.$store.getters.uid,
+				startTime:this.options1[0] ? this.options1[0] : '',
+				endTime:this.options1[1] ? this.options1[1] : '',
+				childUsername:this.childUsername
+			}
+			this.post("http://192.168.1.75:8080/agent/spread/detail",
+				data
+			)
+                .then(reponse => { 
+                    this.loading = false;
+					var res = reponse.result;
+					// console.log(res);
+                    this.data1 = res.list;
+                    this.ajaxHistoryData = this.data1;
+                    this.dataCount = this.data1.length;
+                    // 初始化显示，小于每页显示条数，全显，大于每页显示条数，取前每页条数显示
+                    if (this.data1 < this.pageSize) {
+                        this.data1 = this.ajaxHistoryData;
+                    } else {
+                        this.data1 = this.ajaxHistoryData.slice(
+                            0,
+                            this.pageSize
+                        );
+					}
+					this.$Message.info(reponse.message)
+                }).catch(error => {
+					console.log(error);
+					this.$Message.info(error.message)
+                    // alert("网络错误");
+                });
+		},
+		detailCount() {
+			let data = {
+				userId : this.$store.getters.uid
+			}
+			this.post("http://192.168.1.75:8080/agent/spread/detailCount",data)
+			.then(res => {
+				console.log(res.result);
+				let resData = res.result;
+				this.achieveSum = resData.achieveSum;
+				this.achieveClose = resData.achieveClose;
+				this.achieveNotClose = resData.achieveNotClose;
+				
+			}).catch(err => {
+				this.$Message.info(err.code)
+			})
+		},
+        changepage(index) {
+            var _start = (index - 1) * this.pageSize;
+            var _end = index * this.pageSize;
+            this.data1 = this.ajaxHistoryData.slice(_start, _end);
+        },
+        pageChange(index) {
+            this.Axios();
+            this.pageSize = index;
+            var _start = (index - 1) * this.pageSize;
+            var _end = index * this.pageSize;
+            this.historyData = this.ajaxHistoryData.slice(_start, _end);
+        },
+        extract() {
+            this.modal = true;
+        },
+        handleSubmit1() {
+            this.modal = true;
+        },
+        handleReset() {
+            this.modal = true;
+        }
+    },
+    mounted() {
+		this.Axios();
+		this.detailCount();
+    }
+};
+</script>
+
+<style scoped>
+.page {
+    height: 40px;
+}
+.page p {
+    border-left: 3px solid #2db7f5;
+    height: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* 头部 */
+.table {
+    margin-top: 30px;
+}
+.search {
+    float: left;
+}
+.cursor {
+    cursor: pointer;
+}
+.check {
+    float: left;
+    margin-left: 20px;
+}
+.delete {
+    margin-left: 20px;
+}
+.zhan_mian {
+    border-top: 3px solid #48a2fe;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.unit {
+    float: right;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2px;
+    height: 30px;
+    width: 30px;
+}
+</style>
+<style>
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #edeef2;
+}
+.pageP .ivu-select-dropdown {
+    width: inherit;
+    max-height: 200px;
+    overflow: auto;
+    margin: 5px 0;
+    padding: 5px 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 900;
+    top: -110px !important;
+}
+.auditmanage_shezhi {
+    font-size: 16px;
+}
+
+.auditmanage_shezhi:hover {
+    color: #fe8320;
+}
+</style>
+

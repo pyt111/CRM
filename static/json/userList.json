@@ -1,0 +1,3235 @@
+[
+	{
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18151553371",
+		"agnetOther": 0,
+		"userID": "1fa74c84-c50b-46e4-b237-4687e08e5237",
+		"parentPhone": "",
+		"trueName": "赵冬",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 14,
+			"hours": 16,
+			"seconds": 0,
+			"month": 11,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 40,
+			"time": 1513240800000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "后台添加",
+		"userFreeze": 0,
+		"cardId": "230121199309172216",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15093395684",
+		"agnetOther": 0,
+		"userID": "eeacc248-6116-4ba8-8111-5afce65f6178",
+		"parentPhone": "",
+		"trueName": "常茹",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 14,
+			"hours": 9,
+			"seconds": 55,
+			"month": 11,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 40,
+			"time": 1513215655000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 1000,
+		"cardId": "411329199305272005",
+		"name": "",
+		"userBalance": 9999000,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13621967792",
+		"agnetOther": 0,
+		"userID": "b0d0c298-022c-400b-9ba0-269a2f62ab07",
+		"parentPhone": "",
+		"trueName": "丁清清",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 14,
+			"hours": 9,
+			"seconds": 48,
+			"month": 11,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 24,
+			"time": 1513214688000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 3600,
+		"cardId": "430223199611285524",
+		"name": "",
+		"userBalance": 996321.25,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13007690336",
+		"agnetOther": 0,
+		"userID": "17695e60-f753-4a4e-b059-45054d610456",
+		"parentPhone": "",
+		"trueName": "理想",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 8,
+			"hours": 11,
+			"seconds": 29,
+			"month": 11,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 2,
+			"time": 1512702149000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "PC",
+		"userFreeze": 0,
+		"cardId": "410526199803104115",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18693700983",
+		"agnetOther": 0,
+		"userID": "6372457c-78d5-4c25-819a-fcedc68b27c2",
+		"parentPhone": "",
+		"trueName": "任菊霞",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 22,
+			"seconds": 42,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 17,
+			"time": 1511101062000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622102196904283027",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18299343165",
+		"agnetOther": 0,
+		"userID": "7376dcb9-016a-4b82-9e30-2e14ece3f037",
+		"parentPhone": "",
+		"trueName": "张芸",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 21,
+			"seconds": 8,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1511099408000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652222198509220865",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13899355798",
+		"agnetOther": 0,
+		"userID": "a6ca3c2b-8532-460b-80b3-5f8127537263",
+		"parentPhone": "",
+		"trueName": "高俊恒",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 21,
+			"seconds": 58,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 4,
+			"time": 1511096698000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 10000,
+		"cardId": "652201197205100235",
+		"name": "",
+		"userBalance": 8.3292,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13611015865",
+		"agnetOther": 0,
+		"userID": "05150390-5b1f-4e09-af90-f3a926103d61",
+		"parentPhone": "",
+		"trueName": "周琨",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 19,
+			"seconds": 59,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 59,
+			"time": 1511092799000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "65220119820626122X",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18099028311",
+		"agnetOther": 0,
+		"userID": "51ded79f-f79a-478d-b0f9-d38d342178ee",
+		"parentPhone": "",
+		"trueName": "温彩霞",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 19,
+			"seconds": 29,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 55,
+			"time": 1511092529000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "622424197604202845",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15797989250",
+		"agnetOther": 0,
+		"userID": "ad7bfae3-95fc-414b-801b-a0bdb7054bb0",
+		"parentPhone": "",
+		"trueName": "蔡贤金",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 48,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1511088648000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360429196804100028",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15797989250",
+		"agnetOther": 0,
+		"userID": "ad7bfae3-95fc-414b-801b-a0bdb7054bb0",
+		"parentPhone": "",
+		"trueName": "蔡贤金2",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 48,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1511088648000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360429196804100028",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "17687927578",
+		"agnetOther": 0,
+		"userID": "8b5ee5b6-d82d-43ad-83af-0ec7284a330f",
+		"parentPhone": "",
+		"trueName": "张玲",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 6,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 40,
+			"time": 1511088006000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360102197607086368",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13129500854",
+		"agnetOther": 0,
+		"userID": "a13c85aa-4947-48c1-a724-3fb4c1dfb061",
+		"parentPhone": "",
+		"trueName": "李智",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 3,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 38,
+			"time": 1511087883000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "430626198709118050",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18635070590",
+		"agnetOther": 0,
+		"userID": "83117141-7c56-4055-8e53-f46e0c4e2af6",
+		"parentPhone": "",
+		"trueName": "郭永峰",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 52,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 21,
+			"time": 1511086912000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "142427197505210318",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15911445202",
+		"agnetOther": 0,
+		"userID": "154ebc8f-cf85-469d-894c-3652ec6d19c5",
+		"parentPhone": "",
+		"trueName": "丁丽娟",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 36,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 6,
+			"time": 1511085996000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "530328199908043340",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13678447929",
+		"agnetOther": 0,
+		"userID": "e61501ee-9d75-40ed-b513-dba56e7cfce7",
+		"parentPhone": "",
+		"trueName": "唐洪",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 18,
+			"seconds": 0,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 3,
+			"time": 1511085780000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "510223197202270728",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "17784710848",
+		"agnetOther": 0,
+		"userID": "7e1c03d6-b580-479e-81fe-0ae52bf7eac5",
+		"parentPhone": "",
+		"trueName": "秦美",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 17,
+			"seconds": 43,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 56,
+			"time": 1511085403000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 1000,
+		"cardId": "512301198201071747",
+		"name": "",
+		"userBalance": 2.3016,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13893531707",
+		"agnetOther": 0,
+		"userID": "e1f904fc-eec2-4f06-914d-5e29f0a58860",
+		"parentPhone": "",
+		"trueName": "李静",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 17,
+			"seconds": 23,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 21,
+			"time": 1511083283000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "622322199308161824",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15688331181",
+		"agnetOther": 0,
+		"userID": "d697c174-4fa7-4ed5-adf6-ea285ddc95ff",
+		"parentPhone": "",
+		"trueName": "史瑞芝",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 17,
+			"seconds": 7,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 19,
+			"time": 1511083147000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201197108240527",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13179957002",
+		"agnetOther": 0,
+		"userID": "189ccf57-fb81-4f2a-9c96-69c1e0c4d05a",
+		"parentPhone": "",
+		"trueName": "王铁军",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 14,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 27,
+			"time": 1511072846000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201198112016012",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13179957002",
+		"agnetOther": 0,
+		"userID": "189ccf57-fb81-4f2a-9c96-69c1e0c4d05a",
+		"parentPhone": "",
+		"trueName": "王铁军2",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 14,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 27,
+			"time": 1511072846000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201198112016012",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13179957002",
+		"agnetOther": 0,
+		"userID": "189ccf57-fb81-4f2a-9c96-69c1e0c4d05a",
+		"parentPhone": "",
+		"trueName": "王铁军",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 14,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 27,
+			"time": 1511072846000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201198112016012",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15389926079",
+		"agnetOther": 0,
+		"userID": "013db55f-6940-41b8-994f-368a968efdac",
+		"parentPhone": "",
+		"trueName": "李凤琴",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 13,
+			"seconds": 2,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 44,
+			"time": 1511070242000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201197311140222",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13389357388",
+		"agnetOther": 0,
+		"userID": "fa2dfce3-e595-486c-8ae8-7beaedf31b99",
+		"parentPhone": "",
+		"trueName": "朱建国",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 11,
+			"seconds": 21,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 32,
+			"time": 1511062341000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "622326197104071073",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13011987762",
+		"agnetOther": 0,
+		"userID": "21fec9a6-6747-401a-ae7b-994507d8f190",
+		"parentPhone": "",
+		"trueName": "张丽虹",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 10,
+			"seconds": 12,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 37,
+			"time": 1511059032000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "130983198810080766",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13542358321",
+		"agnetOther": 0,
+		"userID": "2aead45b-fb39-43a2-8225-501be47fcd6e",
+		"parentPhone": "",
+		"trueName": "林红",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 10,
+			"seconds": 30,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 35,
+			"time": 1511058930000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 1000,
+		"cardId": "440981198111252565",
+		"name": "",
+		"userBalance": 2.9592,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13239731572",
+		"agnetOther": 0,
+		"userID": "65b1c121-2628-4fc2-a411-005d65098758",
+		"parentPhone": "",
+		"trueName": "刘颖",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 8,
+			"seconds": 0,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 10,
+			"time": 1511050200000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201198211306023",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15056876334",
+		"agnetOther": 0,
+		"userID": "2d8d4e74-8be8-4e4e-9480-2e1e740ea88e",
+		"parentPhone": "",
+		"trueName": "孙奕然",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 8,
+			"seconds": 13,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 7,
+			"time": 1511050033000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "34128119980712838X",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18726740576",
+		"agnetOther": 0,
+		"userID": "a6b45bef-c57b-4bbc-906c-895290fe5167",
+		"parentPhone": "",
+		"trueName": "焦宝侠",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 19,
+			"hours": 6,
+			"seconds": 9,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1511045409000,
+			"day": 0
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "341281197710048384",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18679256196",
+		"agnetOther": 0,
+		"userID": "ee9019b6-e4bf-4426-9f69-2812c2c99458",
+		"parentPhone": "",
+		"trueName": "蔡小燕",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 22,
+			"seconds": 11,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 16,
+			"time": 1511014571000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360429197709100067",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13579658976",
+		"agnetOther": 0,
+		"userID": "fda3fd2a-697f-460e-b601-811f716a9ee4",
+		"parentPhone": "",
+		"trueName": "张俐",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 21,
+			"seconds": 56,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 3,
+			"time": 1511010236000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 10000,
+		"cardId": "652201195609062520",
+		"name": "",
+		"userBalance": 46.6048,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18727523188",
+		"agnetOther": 0,
+		"userID": "beb1c5f0-4b7e-43e1-a5da-b321a931bafe",
+		"parentPhone": "",
+		"trueName": "刘胜杰",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 20,
+			"seconds": 52,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 48,
+			"time": 1511009332000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "422223196507261019",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18011037260",
+		"agnetOther": 0,
+		"userID": "4aef1368-9e0f-4de3-b1cb-be5f2dffdc49",
+		"parentPhone": "",
+		"trueName": "叶绍武",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 20,
+			"seconds": 8,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 29,
+			"time": 1511008148000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 1000,
+		"cardId": "510502196402202279",
+		"name": "",
+		"userBalance": 8.5476,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15263259349",
+		"agnetOther": 0,
+		"userID": "0e5d9bfe-9933-48c9-9cd5-d54fa56bd1fa",
+		"parentPhone": "",
+		"trueName": "史中臣",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 19,
+			"seconds": 34,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 0,
+			"time": 1511002834000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 6000,
+		"cardId": "370481197001107471",
+		"name": "",
+		"userBalance": 23.1366,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18970024317",
+		"agnetOther": 0,
+		"userID": "45defc33-2ff7-469b-99d4-2e01be63dfe8",
+		"parentPhone": "",
+		"trueName": "张横",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 18,
+			"seconds": 25,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 51,
+			"time": 1511002285000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360102197411065370",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13779189711",
+		"agnetOther": 0,
+		"userID": "9dc52269-c076-4018-b8db-30c4ad38bd31",
+		"parentPhone": "",
+		"trueName": "丁义祥",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 18,
+			"seconds": 28,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 18,
+			"time": 1511000308000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "412726196704117117",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18909350362",
+		"agnetOther": 0,
+		"userID": "d40f8116-c8ca-4715-9d73-ea2b937291a4",
+		"parentPhone": "",
+		"trueName": "范登礼",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 17,
+			"seconds": 18,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 41,
+			"time": 1510998078000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622326196709022835",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18696846555",
+		"agnetOther": 0,
+		"userID": "848173e0-33d8-4a86-b75b-a9dbcbc9ce49",
+		"parentPhone": "",
+		"trueName": "何代禄",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 16,
+			"seconds": 4,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 41,
+			"time": 1510994464000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 10000,
+		"cardId": "512223196902207137",
+		"name": "",
+		"userBalance": 36.6048,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "17723040805",
+		"agnetOther": 0,
+		"userID": "4e43dffb-fddc-47b5-924f-44565f6174b7",
+		"parentPhone": "",
+		"trueName": "聂晓华",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 15,
+			"seconds": 28,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 16,
+			"time": 1510989388000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 7000,
+		"cardId": "512223196404127126",
+		"name": "",
+		"userBalance": 32.5356,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18728126220",
+		"agnetOther": 0,
+		"userID": "0d569483-3aea-446e-9987-e999d081612b",
+		"parentPhone": "",
+		"trueName": "邓泽恒",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 13,
+			"seconds": 39,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 58,
+			"time": 1510984719000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "511024199605290390",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15231975883",
+		"agnetOther": 0,
+		"userID": "59447989-273c-4be9-be47-403b367f7f3e",
+		"parentPhone": "",
+		"trueName": "刘营",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 13,
+			"seconds": 10,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 35,
+			"time": 1510983310000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "130621199303012741",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15283118980",
+		"agnetOther": 0,
+		"userID": "fafb77f4-f915-4e74-b3c4-aedc3bd0535b",
+		"parentPhone": "",
+		"trueName": "杨平",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 12,
+			"seconds": 48,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 40,
+			"time": 1510980048000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "511525198706033659",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13065023367",
+		"agnetOther": 0,
+		"userID": "157de755-f3e6-4b89-83e5-0216c2c112ae",
+		"parentPhone": "",
+		"trueName": "刘绪春",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 10,
+			"seconds": 59,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 55,
+			"time": 1510973759000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "37012419550112251X",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13932377381",
+		"agnetOther": 0,
+		"userID": "1311ea98-0056-4e44-a162-4f29563a1ce2",
+		"parentPhone": "",
+		"trueName": "任丽红",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 8,
+			"seconds": 52,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 27,
+			"time": 1510964872000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "130721197007082629",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13751292722",
+		"agnetOther": 0,
+		"userID": "49310558-2912-4054-a6c1-59d1a05c1b83",
+		"parentPhone": "",
+		"trueName": "封任棠",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 7,
+			"seconds": 18,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 28,
+			"time": 1510961298000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "441900198607032411",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18152029852",
+		"agnetOther": 0,
+		"userID": "a8e6812d-890c-4dc5-8457-a2693b54a8df",
+		"parentPhone": "",
+		"trueName": "马桂莲",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 3,
+			"seconds": 31,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1510948231000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622322196403271227",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18999361768",
+		"agnetOther": 0,
+		"userID": "48d6febf-b812-4750-8220-32d10bdace31",
+		"parentPhone": "",
+		"trueName": "包容",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 1,
+			"seconds": 33,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 52,
+			"time": 1510941153000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652301197803014420",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18801912528",
+		"agnetOther": 0,
+		"userID": "d3a08cd7-e19e-4a5e-b674-e7c614be665c",
+		"parentPhone": "",
+		"trueName": "郭水林",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 18,
+			"hours": 0,
+			"seconds": 8,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 15,
+			"time": 1510935308000,
+			"day": 6
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "360321199009017513",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13983005611",
+		"agnetOther": 0,
+		"userID": "541b21cb-58d4-4056-b2d0-793733fa9887",
+		"parentPhone": "",
+		"trueName": "黄光秀",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 22,
+			"seconds": 56,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 23,
+			"time": 1510928636000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "510203195702110048",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13619992209",
+		"agnetOther": 0,
+		"userID": "05950b27-4aef-4cac-a3e2-2d08a2f7db42",
+		"parentPhone": "",
+		"trueName": "于丹丹",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 21,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 17,
+			"time": 1510924646000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 1200,
+		"cardId": "654221198707101440",
+		"name": "",
+		"userBalance": 9.2056,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13809928877",
+		"agnetOther": 0,
+		"userID": "d8d9aef2-73f4-4ad4-9a9a-6c70fda12e50",
+		"parentPhone": "",
+		"trueName": "郭凯程",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 21,
+			"seconds": 28,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 16,
+			"time": 1510924588000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "654001199212251437",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15343049471",
+		"agnetOther": 0,
+		"userID": "b1480e3b-60ef-4681-8a21-37d283fae665",
+		"parentPhone": "",
+		"trueName": "贺小丽",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 18,
+			"seconds": 18,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 37,
+			"time": 1510915038000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "430481199909077343",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15160944329",
+		"agnetOther": 0,
+		"userID": "01e43602-7b51-410b-b683-2ce9fcec8d83",
+		"parentPhone": "",
+		"trueName": "王蕾",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 18,
+			"seconds": 36,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 31,
+			"time": 1510914696000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 1500,
+		"cardId": "411024199005106242",
+		"name": "",
+		"userBalance": 4324.334,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15199975857",
+		"agnetOther": 0,
+		"userID": "1f7b92f9-ab56-4032-9267-ba32b765ec55",
+		"parentPhone": "",
+		"trueName": "陈永生",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 17,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 57,
+			"time": 1510912646000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "65400119610406071x",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18627995217",
+		"agnetOther": 0,
+		"userID": "3098f20e-a39d-4417-95ea-f7dd60a4374d",
+		"parentPhone": "",
+		"trueName": "辛思",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 17,
+			"seconds": 11,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 44,
+			"time": 1510911851000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "420105199304184221",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13624783188",
+		"agnetOther": 0,
+		"userID": "03764dcf-e0c5-4bde-9c83-4e4120716770",
+		"parentPhone": "",
+		"trueName": "张玲",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 16,
+			"seconds": 39,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 51,
+			"time": 1510908699000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "152823197608120022",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13830536963",
+		"agnetOther": 0,
+		"userID": "0f27363c-4b88-436b-8eb9-01277c9c2a8f",
+		"parentPhone": "",
+		"trueName": "李守奎",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 14,
+			"seconds": 24,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 39,
+			"time": 1510900764000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "622322196905282612",
+		"name": "",
+		"userBalance": 2,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15163340483",
+		"agnetOther": 0,
+		"userID": "9a1b1b22-3204-4146-ac10-4d8d0d14b760",
+		"parentPhone": "",
+		"trueName": "赵国强",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 14,
+			"seconds": 52,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 29,
+			"time": 1510900192000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "371122199505081838",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18323933299",
+		"agnetOther": 0,
+		"userID": "fae41005-3730-45b3-aa5e-57361f495aff",
+		"parentPhone": "",
+		"trueName": "邬昌平",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 14,
+			"seconds": 28,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 7,
+			"time": 1510898848000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "500221198910071914",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15030369184",
+		"agnetOther": 0,
+		"userID": "06a2138f-1cec-4424-8a38-69f7b9fd836f",
+		"parentPhone": "",
+		"trueName": "邵国粹",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 13,
+			"seconds": 51,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 57,
+			"time": 1510898271000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "130728198411056026",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13579647008",
+		"agnetOther": 0,
+		"userID": "bf5fcb59-36a0-4f6f-9c7e-c24aa3b68972",
+		"parentPhone": "",
+		"trueName": "张艳春",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 13,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 9,
+			"time": 1510895366000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "652325198010201221",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18997785228",
+		"agnetOther": 0,
+		"userID": "f31452d1-591a-4152-bfb6-616cec235385",
+		"parentPhone": "",
+		"trueName": "夏红",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 12,
+			"seconds": 46,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 33,
+			"time": 1510893226000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652601196809053561",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15038563823",
+		"agnetOther": 0,
+		"userID": "322b2d13-07ac-4c8a-adfb-6284cb79fd2d",
+		"parentPhone": "",
+		"trueName": "郭韶楠",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 11,
+			"seconds": 23,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 57,
+			"time": 1510891043000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "410327198706230035",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13779188855",
+		"agnetOther": 0,
+		"userID": "163cd17b-c2e9-4da7-bbbd-3b506d26e8aa",
+		"parentPhone": "",
+		"trueName": "张香君",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 11,
+			"seconds": 20,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 20,
+			"time": 1510888820000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "652201197310200246",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13793739579",
+		"agnetOther": 0,
+		"userID": "38719021-2674-44d7-bdd6-28876a06cf36",
+		"parentPhone": "",
+		"trueName": "朱春生",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 9,
+			"seconds": 15,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 30,
+			"time": 1510882215000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "370421196903174285",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18799175170",
+		"agnetOther": 0,
+		"userID": "ee649ee0-2f24-457b-95ee-98527738751d",
+		"parentPhone": "",
+		"trueName": "桑永军",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 17,
+			"hours": 8,
+			"seconds": 1,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 20,
+			"time": 1510878001000,
+			"day": 5
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "650104197105180794",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15095456066",
+		"agnetOther": 0,
+		"userID": "189127c1-29e1-4612-ac6f-0e0ae0f8e2e7",
+		"parentPhone": "",
+		"trueName": "潘玉珍",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 22,
+			"seconds": 34,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 38,
+			"time": 1510843114000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 5000,
+		"cardId": "620302197003040064",
+		"name": "",
+		"userBalance": 23.3436,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "17726636793",
+		"agnetOther": 0,
+		"userID": "e198c747-76e1-48c6-b198-6a135cfd89e2",
+		"parentPhone": "",
+		"trueName": "张晓",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 21,
+			"seconds": 22,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 58,
+			"time": 1510840702000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 10000,
+		"cardId": "500231199204057952",
+		"name": "",
+		"userBalance": 44.7156,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13579607321",
+		"agnetOther": 0,
+		"userID": "d085d6a6-bd91-4c8f-9d9d-01a01741e200",
+		"parentPhone": "",
+		"trueName": "张晓妍",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 21,
+			"seconds": 49,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 39,
+			"time": 1510839589000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "652325197203091247",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13198529193",
+		"agnetOther": 0,
+		"userID": "32ea482f-411a-4b54-ba25-ddfb12b766de",
+		"parentPhone": "",
+		"trueName": "李建容",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 20,
+			"seconds": 20,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 19,
+			"time": 1510834760000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 22000,
+		"cardId": "513031197310115727",
+		"name": "",
+		"userBalance": 88.1128,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13565700811",
+		"agnetOther": 0,
+		"userID": "5e6c5d18-b82a-4c45-919c-ca5c9defa338",
+		"parentPhone": "",
+		"trueName": "鲁颖",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 19,
+			"seconds": 51,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 22,
+			"time": 1510831371000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652201196905100522",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18731490477",
+		"agnetOther": 0,
+		"userID": "1c0e8e81-0baa-42cb-a683-34be41f5a63a",
+		"parentPhone": "",
+		"trueName": "程可鑫",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 18,
+			"seconds": 13,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 47,
+			"time": 1510829233000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "130821199905080021",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18196902988",
+		"agnetOther": 0,
+		"userID": "c04b4986-5530-466f-9942-98cd32fc7190",
+		"parentPhone": "",
+		"trueName": "薄春玲",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 18,
+			"seconds": 38,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 33,
+			"time": 1510828418000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 10000,
+		"cardId": "652201196902130689",
+		"name": "",
+		"userBalance": 39.456,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "17623405162",
+		"agnetOther": 0,
+		"userID": "47469285-3fc5-4acf-bced-316c5d65182e",
+		"parentPhone": "",
+		"trueName": "周建强",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 17,
+			"seconds": 6,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 58,
+			"time": 1510826286000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "500231199705166073",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18779976379",
+		"agnetOther": 0,
+		"userID": "95c93ade-19c8-4e96-b3ed-087984a3f3c6",
+		"parentPhone": "",
+		"trueName": "梅雨雪",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 17,
+			"seconds": 31,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 0,
+			"time": 1510822831000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "360827199808060046",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15738818907",
+		"agnetOther": 0,
+		"userID": "e011e5b9-a104-48b4-a3ba-5080d2086c39",
+		"parentPhone": "",
+		"trueName": "王满",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 16,
+			"seconds": 15,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 32,
+			"time": 1510821135000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "41282219931213187X",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13890552535",
+		"agnetOther": 0,
+		"userID": "9fdfdc83-ad18-4de6-af80-74e1b7bd510f",
+		"parentPhone": "",
+		"trueName": "伍军",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 15,
+			"seconds": 50,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 2,
+			"time": 1510815770000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "51102419711008633X",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15234246056",
+		"agnetOther": 0,
+		"userID": "d1a0bafb-5b3e-433b-8f1d-e655b817ed8d",
+		"parentPhone": "",
+		"trueName": "霍鹏玥",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 14,
+			"seconds": 45,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 2,
+			"time": 1510812165000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "142433199904080043",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15023748129",
+		"agnetOther": 0,
+		"userID": "ab30b6b5-bfcb-4605-a4b4-7f1f9e764f90",
+		"parentPhone": "",
+		"trueName": "赵志平",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 12,
+			"seconds": 5,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 17,
+			"time": 1510805825000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "420683196806033127",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15299784678",
+		"agnetOther": 0,
+		"userID": "6e430dd4-4a54-4e13-9611-c67ce951a47f",
+		"parentPhone": "",
+		"trueName": "朱慧玲",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 12,
+			"seconds": 12,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 2,
+			"time": 1510804932000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "652222196412111225",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13095061890",
+		"agnetOther": 0,
+		"userID": "b028cd26-a416-4108-bbf3-d90157f25ba7",
+		"parentPhone": "",
+		"trueName": "严哲文",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 11,
+			"seconds": 58,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 47,
+			"time": 1510804078000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "652325196901201832",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18263368685",
+		"agnetOther": 0,
+		"userID": "d65e46a0-da46-42b7-9d89-920d2cb7644e",
+		"parentPhone": "",
+		"trueName": "刘卫芳",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 11,
+			"seconds": 22,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 33,
+			"time": 1510803202000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "371122199110301226",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13982475893",
+		"agnetOther": 0,
+		"userID": "82c3826d-b0b5-4f1f-833a-d5b4bfc904d0",
+		"parentPhone": "",
+		"trueName": "李祖平",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 9,
+			"seconds": 13,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 17,
+			"time": 1510795033000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 10000,
+		"cardId": "510522196603130262",
+		"name": "",
+		"userBalance": 34.5204,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18914108017",
+		"agnetOther": 0,
+		"userID": "73ad0f97-1b60-453f-a32a-61ba0cb2ddf0",
+		"parentPhone": "",
+		"trueName": "刘国庆",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 8,
+			"seconds": 29,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 56,
+			"time": 1510793789000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "220422196804061211",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15101701668",
+		"agnetOther": 0,
+		"userID": "bdeaa5e3-6f4f-436b-8050-d69d12ff407a",
+		"parentPhone": "",
+		"trueName": "张琥",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 8,
+			"seconds": 0,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 32,
+			"time": 1510792320000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "632825197204060016",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18993518550",
+		"agnetOther": 0,
+		"userID": "30f5f4c2-9eb1-43a0-b3a7-42d738c93d72",
+		"parentPhone": "",
+		"trueName": "许萍",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 7,
+			"seconds": 43,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 56,
+			"time": 1510790203000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "620302197703260842",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15209022386",
+		"agnetOther": 0,
+		"userID": "b7ba7491-0a30-4741-8186-340f861e0c0b",
+		"parentPhone": "",
+		"trueName": "郑学祥",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 7,
+			"seconds": 41,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 26,
+			"time": 1510788401000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622301198409207135",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18993576769",
+		"agnetOther": 0,
+		"userID": "1683a002-1f20-4332-959a-863366146536",
+		"parentPhone": "",
+		"trueName": "李万浩",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 3,
+			"seconds": 29,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 12,
+			"time": 1510773149000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622322196305140012",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13765105357",
+		"agnetOther": 0,
+		"userID": "3511a7b5-b252-4202-83c1-6a41639d5b4d",
+		"parentPhone": "",
+		"trueName": "张弦",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 16,
+			"hours": 0,
+			"seconds": 58,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 46,
+			"time": 1510764418000,
+			"day": 4
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "522227198712215212",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13999688820",
+		"agnetOther": 0,
+		"userID": "ce8ab883-271d-4d8b-9170-8b6f32827650",
+		"parentPhone": "",
+		"trueName": "李小娟",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 20,
+			"seconds": 6,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 9,
+			"time": 1510747746000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "410223198211186545",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15352120233",
+		"agnetOther": 0,
+		"userID": "51db8629-1113-4cc1-b156-2c755ee35d63",
+		"parentPhone": "",
+		"trueName": "刘俊梅",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 20,
+			"seconds": 18,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 7,
+			"time": 1510747638000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622322196503140021",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18738620760",
+		"agnetOther": 0,
+		"userID": "d96f3a1a-5901-4a1c-b781-519671588c96",
+		"parentPhone": "",
+		"trueName": "何见",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 19,
+			"seconds": 29,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 55,
+			"time": 1510746929000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "411524199612118410",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18935671481",
+		"agnetOther": 0,
+		"userID": "9ccd8a67-d68b-4fc3-a66a-3ade41a7ac89",
+		"parentPhone": "",
+		"trueName": "郭晓",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 17,
+			"seconds": 3,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 17,
+			"time": 1510737423000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "632802197312100025",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13399711139",
+		"agnetOther": 0,
+		"userID": "c2d3802f-0b1d-415b-a97c-700f8ceaf7f1",
+		"parentPhone": "",
+		"trueName": "郭凤英",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 16,
+			"seconds": 39,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 51,
+			"time": 1510735899000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 1000,
+		"cardId": "652201195703080928",
+		"name": "",
+		"userBalance": 4.2744,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18999685973",
+		"agnetOther": 0,
+		"userID": "044c307a-c870-4715-85aa-0bbcbfacdc88",
+		"parentPhone": "",
+		"trueName": "宋君",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 15,
+			"seconds": 4,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 56,
+			"time": 1510732564000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "后台修改",
+		"userFreeze": 2900,
+		"cardId": "65220119630411024X",
+		"name": "",
+		"userBalance": 17.6551,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "18993722823",
+		"agnetOther": 0,
+		"userID": "dd9d5ec2-d89a-4497-8fe1-ddca57a0176c",
+		"parentPhone": "",
+		"trueName": "汤云青",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 15,
+			"seconds": 26,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 50,
+			"time": 1510732226000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 50000,
+		"cardId": "632825197210280031",
+		"name": "",
+		"userBalance": 197.262,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15299563601",
+		"agnetOther": 0,
+		"userID": "1af8545c-c7ee-4d1c-9e26-2a9aac3a7b72",
+		"parentPhone": "",
+		"trueName": "寇祎娜",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 14,
+			"seconds": 32,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 20,
+			"time": 1510726832000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "622421199711250826",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15664548777",
+		"agnetOther": 0,
+		"userID": "f3857907-430a-4111-bfaa-36c9bfe4b340",
+		"parentPhone": "",
+		"trueName": "孔维培",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 14,
+			"seconds": 24,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 5,
+			"time": 1510725924000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "370481199512203835",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "15831706193",
+		"agnetOther": 0,
+		"userID": "776c820d-6b04-4dac-9556-0479cb7adc01",
+		"parentPhone": "",
+		"trueName": "刘兴会",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 13,
+			"seconds": 14,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 37,
+			"time": 1510724234000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 0,
+		"cardId": "132930198610034721",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13319026632",
+		"agnetOther": 0,
+		"userID": "90bc46e9-751a-494f-b397-e5af6eda639f",
+		"parentPhone": "",
+		"trueName": "王红坊",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 12,
+			"seconds": 11,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 35,
+			"time": 1510720511000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "H5",
+		"userFreeze": 50000,
+		"cardId": "37292819690922366X",
+		"name": "",
+		"userBalance": 212.0573,
+		"distributorLvl": 0
+	}, {
+		"activity": 0,
+		"callbacks": [
+			{
+			}
+		],
+		"userName": "13452895503",
+		"agnetOther": 0,
+		"userID": "34493754-3bb9-493d-9435-c28bb67a3712",
+		"parentPhone": "",
+		"trueName": "王丽萍",
+		"parentName": "",
+		"userPassWord": "",
+		"platID": "",
+		"createTime": {
+			"date": 15,
+			"hours": 11,
+			"seconds": 12,
+			"month": 10,
+			"timezoneOffset": -480,
+			"year": 117,
+			"minutes": 3,
+			"time": 1510714992000,
+			"day": 3
+		},
+		"userFreezes": 0,
+		"user_ek1": "APP",
+		"userFreeze": 0,
+		"cardId": "512322197611061848",
+		"name": "",
+		"userBalance": 0,
+		"distributorLvl": 0
+	}
+]

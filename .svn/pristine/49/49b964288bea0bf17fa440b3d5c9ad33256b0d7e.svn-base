@@ -1,0 +1,58 @@
+{ "total":[
+    {   
+		"uuID":"1528",
+		"name": "上海",
+		"userID":"运营",
+		"addr":"A",
+		"branch":"平台分配",
+		"level":"5%",
+		"ladder":"启用",
+		"number":"2017/01/02",
+		"way":"8888"
+	},
+	{   
+		"uuID":"1522",
+		"name": "上海",
+		"userID":"运营",
+		"addr":"A",
+		"branch":"平台分配",
+		"level":"8%",
+		"ladder":"启用",
+		"number":"2017/01/08",
+		"way":"8888"
+	},
+	{   
+		"uuID":"1528",
+		"name": "上海",
+		"userID":"运营",
+		"addr":"A",
+		"branch":"自主开发",
+		"level":"5%",
+		"ladder":"禁用",
+		"number":"2017/01/02",
+		"way":"8888"
+	},
+	{   
+		"uuID":"1528",
+		"name": "上海",
+		"userID":"技术",
+		"addr":"C",
+		"branch":"自主开发",
+		"level":"5%",
+		"ladder":"禁用",
+		"number":"2017/01/02",
+		"way":"8888"
+	},
+	{   
+		"uuID":"1528",
+		"name": "上海",
+		"userID":"运营",
+		"addr":"C",
+		"branch":"自主开发",
+		"level":"5%",
+		"ladder":"禁用",
+		"number":"2017/01/02",
+		"way":"8888"
+	}
+	
+]}

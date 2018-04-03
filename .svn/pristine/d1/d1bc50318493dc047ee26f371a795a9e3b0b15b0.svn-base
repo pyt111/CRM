@@ -1,0 +1,302 @@
+<template>
+	<div class="zhan_mian">
+		<div ref="mian">
+			<Row>
+				<Col :span="4">
+				<span>手机号：</span>
+				<Input v-model="phone" placeholder="请输入..." style="width: 100px" size="small" @on-enter="check"></Input>
+				</Col>
+				<Col :span="12">
+				<span>时间搜索：</span>
+				<DatePicker type="daterange" :v-model="options1" :options="options2" size="small" placement="bottom-start" placeholder="请选择日期" style="width: 200px" format="yyyy-MM-dd" @on-change="dataChange" clearable @on-clear="clearTime" ></DatePicker>
+				<Button type="info" size="small" icon="ios-search" @click="check">搜索</Button>
+				</Col>
+
+			</Row>
+			<Row class="table">
+				<Col :span="24">
+				<Table :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
+				<div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
+									align-items: center;
+									justify-content: center;background: rgba(210, 216, 222, 0.5);" v-if="loading">
+					<Spin size="large"></Spin>
+					<h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
+				</div>
+				</Col>
+				<Col :span="8" style="margin-top: 10px;" class="page">
+				<p>共{{total}}记录，每页显示{{pageSize}}条，共{{Math.ceil(total/pageSize)}}页</p>
+				</Col>
+				<Col :span="16" class="pageP" style="text-align: right;margin-top: 10px;">
+				<!-- @on-change="setInitPage" -->
+				<Page :total="total" :current="pageNum" show-sizer show-elevator :page-size-opts="array" :page-size="pageSize" @on-change="changepage" @on-page-size-change="pageChange">
+				</Page>
+				</Col>
+			</Row>
+		</div>
+	</div>
+</template>
+
+
+<script>
+// import axios from "axios";
+export default {
+    data() {
+        return {
+            loading: false,
+            branch: "",
+            options1: "",
+            number: "",
+            total: 0,
+            pageNum: 1,
+            pageSize: 12,
+            // 电话
+            phone: "",
+            startTime: "",
+            endTime: "",
+            valueDate: "",
+            selItem: [],
+            ajaxHistoryData: [],
+            array: [12, 14, 18],
+            // 初始化信息总条数
+            dataCount: 0,
+            options2: {
+                shortcuts: [
+                    {
+                        text: "周",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 7
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "月",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 30
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "季",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 90
+                            );
+                            return [start, end];
+                        }
+                    },
+                    {
+                        text: "年",
+                        value() {
+                            const end = new Date();
+                            const start = new Date();
+                            start.setTime(
+                                start.getTime() - 3600 * 1000 * 24 * 360
+                            );
+                            return [start, end];
+                        }
+                    }
+                ]
+            },
+            columns1: [
+                {
+                    title: "用户名",
+                    key: "userName",
+                    align: "center",
+                    sortable: true
+                },
+                {
+                    title: "用户手机号",
+                    key: "userPhone",
+                    align: "center",
+                    width: "120px",
+                    sortable: true
+                },
+                {
+                    title: "产品名称",
+                    key: "productName",
+                    align: "center",
+                    sortable: true
+                },
+                {
+                    title: "产品利率",
+                    key: "productRate",
+                    align: "center",
+                    sortable: true
+                },
+                {
+                    title: "操作金额",
+                    key: "investmentMoney",
+                    align: "center",
+                    sortable: true
+                },
+                {
+                    title: "投资提成",
+                    key: "moneyContribution",
+                    align: "center",
+                    sortable: true
+                },
+                {
+                    title: "订单时间",
+                    key: "createTime",
+                    align: "center",
+                    width: "150px",
+                    sortable: true
+                }
+            ],
+            data1: [],
+            page: 1
+        };
+    },
+    mounted() {
+        console.log(this.$route.params.userId);
+        this.number = this.$route.params.userId;
+    },
+    methods: {
+        selChange(sel) {
+            this.selItem = sel;
+        },
+        check() {
+            if (this.pageNum != 1) {
+                this.pageNum = 1;
+            }
+            this.Axios();
+        },
+        dataChange(event) {
+            this.options1 = event;
+            // this.startTime = event[0]
+            // this.endTime = event[1]
+            console.log(this.options1);
+            this.Axios();
+		},
+		clearTime() {
+			this.options1 = [];
+		},
+        Axios() {
+            let data = {
+                agentId: this.$store.getters.uid,
+                pageNum: this.pageNum,
+                phone: this.phone,
+                startTime: this.options1[0],
+                endTime: this.options1[1],
+                pageSize: this.pageSize
+            };
+            this.loading = true;
+            this.post(
+                process.env.BASE_API +
+                    "/agent/UserManage/v1/userFrequencyInvestmentList",
+                data
+            )
+                .then(reponse => {
+                    this.loading = false;
+                    var res = reponse.result;
+                    console.log(reponse);
+                    this.data1 = res.list;
+                    this.total = res.total;
+                })
+                .catch(error => {
+                    console.log(error);
+                    this.$Message.error(error.message);
+                    //alert('网络错误')
+                });
+        },
+        changepage(index) {
+            this.pageNum = index;
+            this.Axios();
+        },
+        pageChange(index) {
+            console.log(index);
+            this.pageSize = index;
+            this.Axios();
+        }
+    },
+    mounted() {
+        let phones = this.$route.params.userPhone;
+        if (phones == undefined) {
+            this.Axios();
+        } else {
+            this.phone = phones;
+            this.Axios();
+        }
+    },
+    created() {
+        // this.phone = this.$route.params.userPhone
+        // console.log(this.$route.params.userPhone)
+    }
+};
+</script>
+
+<style scoped>
+.page {
+    height: 40px;
+}
+.page p {
+    border-left: 3px solid #2db7f5;
+    height: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+/* 头部 */
+.table {
+    margin-top: 30px;
+}
+.search {
+    float: left;
+}
+.cursor {
+    cursor: pointer;
+}
+.check {
+    float: left;
+    margin-left: 20px;
+}
+.delete {
+    margin-left: 20px;
+}
+.zhan_mian {
+    border-top: 3px solid #48a2fe;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+</style>
+<style>
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #edeef2;
+}
+.pageP .ivu-select-dropdown {
+    width: inherit;
+    max-height: 200px;
+    overflow: auto;
+    margin: 5px 0;
+    padding: 5px 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 900;
+    top: -110px !important;
+}
+.auditmanage_shezhi {
+    font-size: 16px;
+}
+
+.auditmanage_shezhi:hover {
+    color: #fe8320;
+}
+</style>
+
