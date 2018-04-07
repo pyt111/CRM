@@ -55,7 +55,7 @@ export default {
         email: [{ required: true, trigger: "blur", validator: validateEmail }],
         password: [{ required: true, trigger: "blur", validator: validatePass }]
       },
-      loading: false,
+      loading: false, 
       showDialog: false
     };
   },
