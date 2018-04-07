@@ -9,8 +9,11 @@ export const BASE_API = '//crm.v2.yhb118.com';
  * 
  * 最后修改时间: Tuesday, 3rd April 2018 1:59:31 pm
  */
-export const loginUrl = BASE_API + "/agent/login";//点击登录获取token
-export const getInfoUrl = BASE_API + "/agent/getInfo";//发送token拉取用户信息
+// export const loginUrl = BASE_API + "/agent/login";//点击登录获取token
+// export const getInfoUrl = BASE_API + "/agent/getInfo";//发送token拉取用户信息
+//本地登录测试
+export const loginUrl = BASE_API + '/login/loginbyemail';//点击登录获取token
+export const getInfoUrl = BASE_API + '/user/info';//发送token拉取用户信息
 
 
 

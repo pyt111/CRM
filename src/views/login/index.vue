@@ -32,7 +32,7 @@ export default {
   data() {
     const validateEmail = (rule, value, callback) => {
       // console.log(rule, value);
-      if (!phoneCase(value)) {
+      if (phoneCase(value)) {
         callback(new Error("请输入正确格式手机号码"));
       } else {
         callback();
@@ -47,7 +47,8 @@ export default {
     };
     return {
       loginForm: {
-        email: "15821682178",
+        // email: "15821682178",
+        email: "agent",
         password: "qwe123"
       },
       loginRules: {
@@ -69,12 +70,11 @@ export default {
           this.$store
             .dispatch("LoginByEmail", this.loginForm)
             .then((response) => {
-              console.log(response);
               let data = response;
               
               Cookies.set('Admin-Token', data.token);
               this.$store.commit('SET_TOKEN', data.token);
-              this.$store.commit('SET_EMAIL', email);
+              this.$store.commit('SET_EMAIL', this.email);
               console.log(data);
               // this.$Message.success(response.message);
               // this.loading = false;
@@ -121,7 +121,7 @@ export default {
   height: 100vh;
   background-color: #ffffff;
   
-  background-image: url(../../../static/img/bgimg.jpg);
+  background-image: url('/static/img/bgimg.jpg');
   input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
     -webkit-text-fill-color: #000 !important;

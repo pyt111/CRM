@@ -46,16 +46,25 @@ const userMap = {
 
 export default {
   loginByEmail: config => {
-    const { email } = JSON.parse(config.body);
-    console.log(email.split('@')[0])
-      return userMap[email.split('@')[0]];
+    console.log(config.body);
+    let userName = config.body.userName;
+    // const { email } = JSON.parse(config.body);
+    // console.log(email.split('@')[0])
+    // return userMap[email.split('@')[0]];
+    let data = {
+      datas: userMap[userName],
+      code: 0,
+      message: '成功获取routerMap'
+    }
+    return data;
   },
   getInfo: config => {
     const { token } = param2Obj(config.url);
+    console.log(config.url);
     if (userMap[token]) {
       return userMap[token];
     } else {
-      return Promise.reject('a'); 
+      return Promise.reject('a');
     }
   },
   logout: () => 'success'
