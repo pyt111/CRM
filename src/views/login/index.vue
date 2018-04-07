@@ -71,7 +71,7 @@ export default {
             .dispatch("LoginByEmail", this.loginForm)
             .then((response) => {
               let data = response;
-              
+               
               Cookies.set('Admin-Token', data.token);
               this.$store.commit('SET_TOKEN', data.token);
               this.$store.commit('SET_EMAIL', this.email);
