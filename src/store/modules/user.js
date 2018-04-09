@@ -1,11 +1,12 @@
-import { loginByEmail, logout, getInfo } from 'api/login';
+// import { loginByEmail, logout, getInfo } from 'api/login';
+
 let CryptoJS = require("crypto-js");
-import { decrypt } from 'utils/allFuns';//自定义非vue公共方法 decrypt--aes解密
+// import { decrypt } from 'utils/allFuns';//自定义非vue公共方法 decrypt--aes解密
 import Cookies from 'js-cookie';
 import datas from '../getters';
 import qs from 'qs'
-import { loginUrl, getInfoUrl } from 'api/url'
 import * as API from 'api/axiosMetonds';
+import { loginUrl, getInfoUrl,logOut } from 'api/url';
 
 const user = {
 	state: {
@@ -80,91 +81,89 @@ const user = {
 			let passWord = userInfo.password
 			//    console.log(userInfo.email)
 			// return new Promise((resolve, reject) => {
-				// function loginByEmail(userName, passWord) {
-				// console.log(userName,passWord);
-				let queVal = {
-					userName: email,
-					passWord: passWord
-				};
-				// let data;
-				return API.post(loginUrl, queVal)
-				// .then(response => {
-				// 	console.log(response);
-				// 	let data = decrypt(response.data);
-				// 	// console.log(data);
-				// 	Cookies.set('Admin-Token', data.token);
-				// 	commit('SET_TOKEN', data.token);
-				// 	commit('SET_EMAIL', email);
-				// 	// if(data.code == 200) {
-				// 	// 	resolve(data);
-				// 	// }else{
-				// 	// 	reject(data);
-				// 	// }
-				// 	// console.log(data);
-				// }).catch(err => {
-				// 	console.log(err.message);
-				// })
-				// console.log(data);
-					// if(data.code == 200) {
-					// 	resolve(data);
-					// }else{
-					// 	reject(data);
-					// }
-
-				// console.log(data);
-				// return API.post({
-				// 	//  url: 'http://192.168.1.30:8091/app2/index/test.do',
-				// 	url: loginUrl,
-				// 	method: 'post',
-				// 	data: qs.stringify(data)
-				// 	// params:{userName:userName,passWord:passWord}
-				// });
-				// }
+			// function loginByEmail(userName, passWord) {
+			// console.log(userName,passWord);
+			let queVal = {
+				userName: email,
+				passWord: passWord
+			};
+			let data;
+			return new Promise((resolve, reject) => {
+				API.post(loginUrl, queVal).then(response => {
+					Cookies.set('Admin-Token', response.token);
+						commit('SET_TOKEN', response.token);
+						commit('SET_EMAIL', queVal.email);
+						resolve(response)
+				}).catch(error => {
+					reject(error)
+				})
+			})
 
 
-				// loginByEmail(email, userInfo.password).then(response => {
-				// 	// let str  = response.data;
-				// 	let data = decrypt(response.data);
-				// 	console.log(data);
-				// 	// console.log(reject)
-				// 	// let token = 'agent'
-				// 	Cookies.set('Admin-Token', data.token);
-				// 	commit('SET_TOKEN', data.token);
-				// 	// Cookies.set('Admin-Token', data.result.deviceToken);
-				// 	// commit('SET_TOKEN', data.result.deviceToken);
-				// 	commit('SET_EMAIL', email);
-				// 	if(data.code == 200) {
-				// 		resolve(data);
-				// 	}else{
-				// 		reject(data);
-				// 	}
+			// loginByEmail(email, userInfo.password).then(response => {
+			// 	// let str  = response.data;
+			// 	let data = decrypt(response.data);
+			// 	console.log(data);
+			// 	// console.log(reject)
+			// 	// let token = 'agent'
+			// 	Cookies.set('Admin-Token', data.token);
+			// 	commit('SET_TOKEN', data.token);
+			// 	// Cookies.set('Admin-Token', data.result.deviceToken);
+			// 	// commit('SET_TOKEN', data.result.deviceToken);
+			// 	commit('SET_EMAIL', email);
+			// 	if(data.code == 200) {
+			// 		resolve(data);
+			// 	}else{
+			// 		reject(data);
+			// 	}
 
-				// })
+			// })
 			// });
 		},
 
 
 		// 获取用户信息
 		GetInfo({ commit, state }) {
-			// console.log(state)
+			// console.log(state.token)
+			let reqVal = {
+				token: state.token
+			}
 			return new Promise((resolve, reject) => {
-				getInfo(state.token).then(response => {
+				API.post(getInfoUrl, reqVal).then(response => {
 					// console.log(response);
-					let data = decrypt(response.data);
-					console.log(data);
-					commit('SET_ROLES', data.role);
-					commit('SET_NAME', data.au.trueName);
-					// commit('SET_AVATAR', data.avatar);
-					commit('SET_UID', data.au.userId);
-					commit('SET_USERNAME', data.au.userName);
-
-					// commit('SET_INTRODUCTION', data.introduction);
-					resolve(data);
+					commit('SET_ROLES', response.role);
+					commit('SET_NAME', response.au.trueName);
+					commit('SET_UID', response.au.userId);
+					commit('SET_USERNAME', response.au.userName);
+					// commit('SET_AVATAR', response.avatar);
+					// 	commit('SET_USERNAME', response.au.userName);
+					resolve(response)
 				}).catch(error => {
-					reject(error);
+					reject(error)
+				})
+			})
 
-				});
-			});
+
+
+
+			// return new Promise((resolve, reject) => {
+			// 	getInfo(state.token).then(response => {
+			// 		// console.log(response);
+			// 		let data = decrypt(response.data);
+			// 		console.log(data);
+			// 		commit('SET_ROLES', data.role);
+			// 		commit('SET_NAME', data.au.trueName);
+			// 		// commit('SET_AVATAR', data.avatar);
+			// 		commit('SET_UID', data.au.userId);
+			// 		commit('SET_USERNAME', data.au.userName);
+
+			// 		// commit('SET_INTRODUCTION', data.introduction);
+			// 		resolve(data);
+			// 	}).catch(error => {
+			// 		reject(error);
+
+			// 	});
+			// });
 		},
 
 		// 第三方验证登录
@@ -185,18 +184,29 @@ const user = {
 		// 登出
 		LogOut({ commit, state }) {
 			return new Promise((resolve, reject) => {
-				logout(state.token).then(() => {
+				let data = {
+					token:state.token
+				}
+				API.post(logOut).then(response => {
+					Cookies.remove('Admin-Token');
 					commit('SET_TOKEN', '');
 					commit('SET_ROLES', '');
-
-					// commit('SET_ROLES', []);
-					Cookies.remove('Admin-Token');
-					console.log('123123');
-					console.log(datas.roles);
-					resolve();
+					resolve(response);
 				}).catch(error => {
 					reject(error);
-				});
+				})
+				// logout(state.token).then(() => {
+				// 	commit('SET_TOKEN', '');
+				// 	commit('SET_ROLES', '');
+
+				// 	// commit('SET_ROLES', []);
+				// 	Cookies.remove('Admin-Token');
+				// 	console.log('123123');
+				// 	console.log(datas.roles);
+				// 	resolve();
+				// }).catch(error => {
+				// 	reject(error);
+				// });
 			});
 		},
 

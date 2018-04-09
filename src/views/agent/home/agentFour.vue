@@ -244,6 +244,8 @@ export default {
             this.tichengAxiosOk();
         },
         modalsNo() {
+            this.showText = true;
+            this.showText2 = true;
             this.modal = false;
             this.allUserBalance = "";
         }

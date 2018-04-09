@@ -113,7 +113,7 @@ export default {
         },
         methods: {
 			Axios(){
-				console.log('111111111122222222222');
+				// console.log('111111111122222222222');
                 var params = new URLSearchParams()
 				// params.append('agentId', 'e555d1ef-f415-417e-878c-edeed4fcd387')
 				let data = {
@@ -148,9 +148,11 @@ export default {
 					.then(reponse=>{
 						this.loading = false;
 						var res = reponse.result;
-						console.log(res)
+                        console.log(reponse)
+                        this.$Message.success(reponse.message)
 					})
 					.catch(error=>{
+                        this.$Message.error(reponse.message)
 						//alert('网络错误')
 					})
 			},

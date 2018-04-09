@@ -67,5 +67,11 @@ export default {
       return Promise.reject('a');
     }
   },
-  logout: () => 'success'
+  logout: config => {
+    let data = {
+      code: 0,
+      message:'登出成功'
+    }
+    return data;
+  }
 };

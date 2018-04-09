@@ -31,7 +31,7 @@ export function getInfo(token) {
   }
   return asd({
     url: getInfoUrl,
-    url: '/user/info',
+    // url: '/user/info',
     method: 'post',
     data:qs.stringify(data)
   });

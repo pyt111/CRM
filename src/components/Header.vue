@@ -533,11 +533,14 @@ export default {
             e.preventDefault();
             this.$store
                 .dispatch("LogOut")
-                .then(() => {
-                    location.reload();
+                .then(response => {
+                    console.log(response);
+                    location.reload();//刷新页面  防止更改登录账户后路由加载不正确导致列表显示不正常
                     setTimeout(() => {
                         this.$router.push({ path: "/login" });
+                       
                     }, 1000);
+                     this.$Message.success(response.message)
                 })
                 .catch(err => {
                     this.$message.error(err);
@@ -675,6 +678,8 @@ export default {
             this.tichengAxiosOk();
         },
         modalsNo() {
+            this.showText = true;
+            this.showText2 = true;
             this.modal = false;
             this.allUserBalance = "";
         },

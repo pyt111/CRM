@@ -170,7 +170,7 @@ export const post = (url, data) => {
             //     // cancel = c
             // })
         }).then(res => {
-            console.log(typeof (res.data));
+            // console.log(typeof (res.data));
             if (typeof (res.data) != 'string' && res.data != '') {//判断返回数据是否加密 如果加密则数据为字符串
                 if (res.data.code == 0) {
                     resolve(res.data)
@@ -181,10 +181,9 @@ export const post = (url, data) => {
                 }
             } else if (typeof (res.data) == 'string' && res.data != '') {
                 let decryData = decrypt(res.data)
-                console.log(decryData);
-                if (decryData.code == 200) {
+                if (decryData.code == 0) {
                     resolve(decryData)
-                } else if (decryData.code != 200) {
+                } else if (decryData.code != 0) {
                     reject(decryData)
                 }
             } else if (res.data == '') {

@@ -1,5 +1,10 @@
 
-export const BASE_API = '//crm.v2.yhb118.com';
+// export const BASE_API = '//crm.v2.yhb118.com';//v2测试
+export const BASE_API = '//crm.yhb118.com';//阿里云测试
+
+// export const BASE_API = '//192.168.1.32:8080';
+// export const BASE_API = '//192.168.1.20:8080';//春春
+
 // export const BASE_API= process.env.BASE_API;
 
 /*
@@ -9,11 +14,13 @@ export const BASE_API = '//crm.v2.yhb118.com';
  * 
  * 最后修改时间: Tuesday, 3rd April 2018 1:59:31 pm
  */
-// export const loginUrl = BASE_API + "/agent/login";//点击登录获取token
-// export const getInfoUrl = BASE_API + "/agent/getInfo";//发送token拉取用户信息
+export const loginUrl = BASE_API + "/agent/login";//点击登录获取token
+export const getInfoUrl = BASE_API + "/agent/getInfo";//发送token拉取用户信息
+export const logOut = BASE_API + "/login/logout";//前端登出  (暂时使用mockjs登出操作)
+
 //本地登录测试
-export const loginUrl = BASE_API + '/login/loginbyemail';//点击登录获取token
-export const getInfoUrl = BASE_API + '/user/info';//发送token拉取用户信息
+// export const loginUrl = BASE_API + '/login/loginbyemail';//点击登录获取token
+// export const getInfoUrl = BASE_API + '/user/info';//发送token拉取用户信息
 
 
 

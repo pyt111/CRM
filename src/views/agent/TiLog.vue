@@ -118,6 +118,7 @@
 			optionChange(events) {
 				console.log(events);
 				 this.state = events;
+				 this.pageNum = 1;//选择状态后初始化为第一页面
 				 this.Axios()
 			},
 			selChange(sel){
