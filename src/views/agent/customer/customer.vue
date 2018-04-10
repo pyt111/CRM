@@ -121,6 +121,7 @@ export default {
             modal2: false,
             userId: "",
             IsAgentId: "",
+            agentUsername:'',
             formCustom: {
                 userName: "",
                 passWord: "",
@@ -416,7 +417,8 @@ export default {
         };
     },
     created() {
-        this.IsAgentId = this.$store.getters.uid
+        this.IsAgentId = this.$store.getters.uid;
+        this.agentUsername =  this.$store.getters.userName;
     },
     methods: {
         selChange(sel) {
@@ -435,7 +437,7 @@ export default {
             this.Axios();
         },
         enter() {
-            console.log(123);
+            // console.log(123);
         },
         Axios() {
             let data = {
@@ -453,7 +455,7 @@ export default {
                 data
             )
                 .then(reponse => {
-                    console.log(reponse);
+                    // console.log(reponse);
                     this.loading = false;
                     var res = reponse.result;
                     if (res != null) {
@@ -487,7 +489,7 @@ export default {
             //  console.log(this.IsAgentId)
             let data = {
                 // agentId:this.$store.getters.uid,
-                phone: this.phone,
+                phone: this.agentUsername,
                 userName: this.formCustom.userName,
                 passWord: this.formCustom.passWord,
                 userNameCode: this.formCustom.userNameCode,
@@ -514,7 +516,7 @@ export default {
                 })
                 .catch(err => {
                      this.spinShow = false;
-                    console.log(err);
+                    // console.log(err);
                     this.$Message.error(err.message);
                 });
         },
@@ -562,7 +564,7 @@ export default {
         },
         // 确定快速请求
         quickBaobei(name) {
-            console.log(name);
+            // console.log(name);
             if (
                 this.formCustom.userName == "" ||
                 this.formCustom.passWord == "" ||

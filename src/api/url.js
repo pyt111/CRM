@@ -1,6 +1,6 @@
 
-// export const BASE_API = '//crm.v2.yhb118.com';//v2测试
-export const BASE_API = '//crm.yhb118.com';//阿里云测试
+export const BASE_API = '//crm.v2.yhb118.com';//v2测试
+// export const BASE_API = '//crm.yhb118.com';//阿里云测试
 
 // export const BASE_API = '//192.168.1.32:8080';
 // export const BASE_API = '//192.168.1.20:8080';//春春

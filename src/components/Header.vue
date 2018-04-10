@@ -706,7 +706,7 @@ export default {
         }
     },
     created() {
-        // console.log(this.$store);
+        console.log(this.$store);
         this.phone = this.$store.getters.userName;
         // console.log(this.$store.getters.uid);
         // console.log(this.phone)

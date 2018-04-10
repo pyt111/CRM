@@ -1,7 +1,8 @@
 // import { loginByEmail, logout, getInfo } from 'api/login';
-
+console.log('1111111111111111111111111111111111111');
 let CryptoJS = require("crypto-js");
 // import { decrypt } from 'utils/allFuns';//自定义非vue公共方法 decrypt--aes解密
+import Vue from 'vue';
 import Cookies from 'js-cookie';
 import datas from '../getters';
 import qs from 'qs'
@@ -76,7 +77,7 @@ const user = {
 		// 邮箱登录
 		LoginByEmail({ commit }, userInfo) {
 			console.log(userInfo);
-
+			console.log(Vue);
 			let email = userInfo.email.trim();
 			let passWord = userInfo.password
 			//    console.log(userInfo.email)
