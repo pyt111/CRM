@@ -181,18 +181,18 @@ export default {
             if (this.pageNum != 1) {
                 this.pageNum = 1;
             }
-            this.Axios();
+            this.baseData();
         },
         optionChange(events) {
             this.checkState = events;
             this.pageNum = 1;//选择状态后初始化为第一页面
-            this.Axios();
+            this.baseData();
         },
         dataChange(event) {
             this.options1 = event;
             // this.startTime = event[0]
             // this.endTime = event[1]
-            this.Axios();
+            this.baseData();
             // console.log('111111111111111111'+event[0])
         },
         first(index) {
@@ -202,7 +202,7 @@ export default {
                 params: { userId: this.data1[index].number }
             });
         },
-        Axios() {
+        baseData() {
             // var params = new URLSearchParams()
             // params.append('userId', 'e555d1ef-f415-417e-878c-edeed4fcd387')
             // params.append('pageNum', this.pageNum)
@@ -219,13 +219,13 @@ export default {
                 pageSize: this.pageSize
             };
             this.loading = true;
-            this.post(process.env.BASE_API + "/agent/achieve/detail", data)
-                .then(reponse => {
+            // this.post(process.env.BASE_API + "/agent/achieve/detail", data)
+             this.$store.dispatch("t_TGTXMXJE", data)
+                .then(res => { //  /agent/achieve/detail
                     this.loading = false;
-                    var res = reponse.result;
                     // console.log(reponse)
-                    this.data1 = res.list;
-                    this.total = res.total;
+                    this.data1 = res.result.list;
+                    this.total = res.result.total;
                     //this.$Message.success(reponse.message)
                 })
                 .catch(error => {
@@ -235,11 +235,11 @@ export default {
         },
         changepage(index) {
             this.pageNum = index;
-            this.Axios();
+            this.baseData();
         },
         pageChange(index) {
             this.pageSize = index;
-            this.Axios();
+            this.baseData();
         },
         handleSubmit(name) {
             this.$refs[name].validate(valid => {
@@ -252,7 +252,7 @@ export default {
         }
     },
     mounted() {
-        this.Axios();
+        this.baseData();
     }
 };
 </script>

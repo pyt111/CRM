@@ -73,7 +73,7 @@ export const popularizeSetting = BASE_API + "/agent/PopularizeManage/v1/populari
 export const sendSmsPopularize = BASE_API + "/agent/PopularizeManage/v1/sendSmsPopularize";//代理商推广设置-发送短信邀请子商户
 
 //推广收益明细 popularizeEarnings
-export const detailCount = BASE_API + "/agent/spread/detailCount";//代理商推广收益细页面
+export const detailCount = BASE_API + "/agent/spread/detailCount";//代理商推广收益细金额
 export const spreaddetail = BASE_API + "/agent/spread/detail";//代理商推广收益明细
 
 

@@ -107,7 +107,8 @@ export default {
                 trueName:this.trueName,
                 phone:this.phone
             };
-            this.post(process.env.BASE_API+"/agent/appLogin", data)
+            // this.post(process.env.BASE_API+"/agent/appLogin", data)
+            this.$store.dispatch('p_CZRZ',data)
                 .then(reponse => {
 					// console.log(reponse);
                     var res = reponse.result;

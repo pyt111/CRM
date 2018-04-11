@@ -169,19 +169,19 @@ export default {
             if (this.pageNum != 1) {
                 this.pageNum = 1;
             }
-            this.Axios();
+            this.baseData();
         },
         dataChange(event) {
             this.options1 = event;
             // this.startTime = event[0]
             // this.endTime = event[1]
             console.log(this.options1);
-            this.Axios();
+            this.baseData();
 		},
 		clearTime() {
 			this.options1 = [];
 		},
-        Axios() {
+        baseData() {
             let data = {
                 agentId: this.$store.getters.uid,
                 pageNum: this.pageNum,
@@ -191,41 +191,35 @@ export default {
                 pageSize: this.pageSize
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API +
-                    "/agent/UserManage/v1/userFrequencyInvestmentList",
-                data
-            )
-                .then(reponse => {
+           
+             this.$store.dispatch('k_TZDT',data)
+                .then(res => {
                     this.loading = false;
-                    var res = reponse.result;
-                    console.log(reponse);
-                    this.data1 = res.list;
-                    this.total = res.total;
+                    this.data1 = res.result.list;
+                    this.total = res.result.total;
                 })
                 .catch(error => {
                     console.log(error);
                     this.$Message.error(error.message);
-                    //alert('网络错误')
                 });
         },
         changepage(index) {
             this.pageNum = index;
-            this.Axios();
+            this.baseData();
         },
         pageChange(index) {
             console.log(index);
             this.pageSize = index;
-            this.Axios();
+            this.baseData();
         }
     },
     mounted() {
         let phones = this.$route.params.userPhone;
         if (phones == undefined) {
-            this.Axios();
+            this.baseData();
         } else {
             this.phone = phones;
-            this.Axios();
+            this.baseData();
         }
     },
     created() {

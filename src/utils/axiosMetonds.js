@@ -172,7 +172,7 @@ export default {
                         //     // cancel = c
                         // })
                     }).then(res => {
-                        console.log(typeof (res.data));
+                        // console.log(typeof (res.data));
                         if (typeof (res.data) != 'string' && res.data != '') {//判断返回数据是否加密 如果加密则数据为字符串
                             if (res.data.code == 0) {
                                 resolve(res.data)
@@ -183,7 +183,7 @@ export default {
                             }
                         } else if (typeof (res.data) == 'string' && res.data != '') {
                             let decryData = decrypt(res.data)
-                            console.log(decryData);
+                            // console.log(decryData);
                             if (decryData.code == 0) {
                                 resolve(decryData)
                             } else if (decryData.code != 0) {

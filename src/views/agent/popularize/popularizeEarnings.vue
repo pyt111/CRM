@@ -218,17 +218,14 @@ export default {
             this.selItem = sel;
         },
         check() {
-            // console.log(this.Input);
-            // console.log(this.addr);
-            // console.log(this.options1);
-            this.Axios();
+            this.baseData();
         },
         dataChange(event) {
             // console.log(event);
             this.options1 = event;
             // console.log(this.options1);
         },
-        Axios() {
+        baseData() {
             this.loading = true;
             // console.log(this.options1);
             // console.log(this.$store.getters.uid);
@@ -238,13 +235,13 @@ export default {
                 endTime: this.options1[1] ? this.options1[1] : "",
                 childUsername: this.childUsername
             };
-            console.log(data.startTime.length, data.endTime.length);
-            this.post(process.env.BASE_API + "/agent/spread/detail", data)
-                .then(reponse => {
+            // console.log(data.startTime.length, data.endTime.length);
+            // this.post(process.env.BASE_API + "/agent/spread/detail", data)
+             this.$store.dispatch('t_TGSYMXLB',data)
+                .then(res => { // /agent/spread/detail
                     this.loading = false;
-                    var res = reponse.result;
                     // console.log(res);
-                    this.data1 = res.list;
+                    this.data1 = res.result.list;
                     this.ajaxHistoryData = this.data1;
                     this.dataCount = this.data1.length;
                     // 初始化显示，小于每页显示条数，全显，大于每页显示条数，取前每页条数显示
@@ -268,8 +265,10 @@ export default {
             let data = {
                 userId: this.$store.getters.uid
             };
-            this.post(process.env.BASE_API + "/agent/spread/detailCount", data)
-                .then(res => {
+            
+            // this.post(process.env.BASE_API + "/agent/spread/detailCount", data)
+            this.$store.dispatch('t_TGSYMXJE',data)
+                .then(res => { ///agent/spread/detailCoun
                     console.log(res.result);
                     let resData = res.result;
                     this.achieveSum = resData.achieveSum;
@@ -286,7 +285,7 @@ export default {
             this.data1 = this.ajaxHistoryData.slice(_start, _end);
         },
         pageChange(index) {
-            this.Axios();
+            this.baseData();
             this.pageSize = index;
             var _start = (index - 1) * this.pageSize;
             var _end = index * this.pageSize;
@@ -394,7 +393,7 @@ export default {
         }
     },
     mounted() {
-        this.Axios();
+        this.baseData();
         this.detailCount();
     },
     created() {

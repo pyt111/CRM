@@ -137,8 +137,8 @@ export default {
         return {
             msg: "123",
             result: "",
-             showText: true,
-             showText2: true,
+            showText: true,
+            showText2: true,
             // 提成提现
             allUserBalance: "",
             modal: false,
@@ -154,6 +154,20 @@ export default {
         };
     },
     methods: {
+        baseData() {
+            let params = {
+                userName: this.$store.getters.userName
+            };
+            this.$store
+                .dispatch("k_top", params)
+                .then(res => {
+                    ///agent/panel
+                    this.result = res.result;
+                })
+                .catch(error => {
+                    this.$Message.error(error.message);
+                });
+        },
         tichengAxios() {
             // console.log(this.userId)
             let data = {
@@ -184,9 +198,12 @@ export default {
         },
         modalsAll() {
             // this.allUserBalance = this.modals.userBalance;
-            if (this.modals.userBalance <= this.modals.everyPrice*10000) {
+            if (this.modals.userBalance <= this.modals.everyPrice * 10000) {
                 this.allUserBalance = this.modals.userBalance;
-            }else if(this.modals.userBalance > this.modals.everyPrice*10000){
+            } else if (
+                this.modals.userBalance >
+                this.modals.everyPrice * 10000
+            ) {
                 this.allUserBalance = this.modals.everyPrice * 10000;
             }
             //  console.log(this.modals.one)
@@ -202,19 +219,19 @@ export default {
             // this.loading = true;
             if (
                 this.allUserBalance * 1 <= this.modals.poundage * 1 ||
-                this.allUserBalance * 1 > this.modals.everyPrice * 10000 
+                this.allUserBalance * 1 > this.modals.everyPrice * 10000
             ) {
                 this.showText = false;
                 this.showText2 = true;
-            } else if( this.allUserBalance * 1 > this.modals.userBalance) {
-                 this.showText2 = false;
-                 this.showText = true;
-            }else if (
+            } else if (this.allUserBalance * 1 > this.modals.userBalance) {
+                this.showText2 = false;
+                this.showText = true;
+            } else if (
                 this.allUserBalance * 1 > this.modals.poundage * 1 &&
                 this.allUserBalance * 1 <= this.modals.everyPrice * 10000
             ) {
-                 this.showText2 = true;
-                 this.showText = true;
+                this.showText2 = true;
+                this.showText = true;
                 this.post(process.env.BASE_API + "/agent/commWithdrawal", data)
                     .then(reponse => {
                         this.loading = false;
@@ -251,18 +268,7 @@ export default {
         }
     },
     mounted() {
-        let params = {
-            userName: this.$store.getters.userName
-        };
-        this.get(process.env.BASE_API + "/agent/panel", params)
-            .then(reponse => {
-                var res = reponse.result;
-                this.result = res;
-                // console.log(res)
-            })
-            .catch(error => {
-                //alert('网络错误')
-            });
+        this.baseData();
     },
     created() {
         this.userId = this.$store.getters.uid;

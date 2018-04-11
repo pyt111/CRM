@@ -119,7 +119,7 @@
 				console.log(events);
 				 this.state = events;
 				 this.pageNum = 1;//选择状态后初始化为第一页面
-				 this.Axios()
+				 this.baseData()
 			},
 			selChange(sel){
                     this.selItem = sel;
@@ -128,9 +128,9 @@
 				if(this.pageNum != 1){
 					this.pageNum = 1;
 				}
-				this.Axios()
+				this.baseData()
 			},
-			Axios(){
+			baseData(){
                 // var params = new URLSearchParams()
 				// params.append('agentId', 'e555d1ef-f415-417e-878c-edeed4fcd387')
 				// params.append('pageNum', this.pageNum)
@@ -145,15 +145,13 @@
 						pageSize:this.pageSize
 					}
                     this.loading = true;			
-					this.post(process.env.BASE_API+'/agent/UserManage/v1/withdrawMoneyDetail',
-					data
-					)
-					.then(reponse=>{
+					// this.post(process.env.BASE_API+'/agent/UserManage/v1/withdrawMoneyDetail',
+					// data
+					// )
+					 this.$store.dispatch('x_TXMX',data).then(res=>{
 						this.loading = false;
-						var res = reponse.result
-						console.log(reponse)
-						this.data1 = res.list;
-						this.total = res.total
+						this.data1 = res.result.list;
+						this.total = res.result.total
 						//this.$Message.success(reponse.message)
 					})
 					.catch(error=>{
@@ -163,11 +161,11 @@
 			},
 			changepage(index){
 				this.pageNum = index
-				this.Axios()
+				this.baseData()
 			},
 			pageChange(index){
 				this.pageSize = index
-				this.Axios()
+				this.baseData()
 			},
 			handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
@@ -180,7 +178,7 @@
 			},
 		},
 		mounted(){	
-				this.Axios()
+				this.baseData()
 		}
 
 	}

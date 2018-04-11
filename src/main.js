@@ -9,7 +9,7 @@ import VueClipboard from 'vue-clipboard2'
 import './mock/index.js';  // 该项目所有请求使用mockjs模拟
 import './login.js'
 import './ui.js' 
-
+import * as API from 'api/axiosMetonds';
 Vue.use(VueClipboard);
 // Vue.use(jquery);
 Vue.config.productionTip = false;

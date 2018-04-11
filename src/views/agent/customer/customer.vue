@@ -1,105 +1,105 @@
 <template>
-	<div class="zhan_mian">
-		<div ref="mian">
-			<Row>
-				<Col :span="4">
-				<span>手机号：</span>
-				<Input v-model="phone" placeholder="请输入..." style="width: 100px" size="small" @on-enter="check"></Input>
-				</Col>
-				<Col :span="12">
-				<span>时间搜索：</span>
-				<DatePicker type="daterange" :v-model="options1" :options="options2" size="small" placement="bottom-start" placeholder="请选择日期" style="width: 200px" format="yyyy-MM-dd" @on-change="dataChange"></DatePicker>
-				<Button type="info" size="small" icon="ios-search" @click="check">搜索</Button>
-				</Col>
-			</Row>
-			<Row>
-				<Col :span="2" style="margin-top:20px;">
-				<div class="search" style="width:60px">
-					<Button @click="baobei">
-						<Icon type="document-text" color="#2db7f5"></Icon>
-						<span>报备</span>
-					</Button>
-				</div>
-				</Col>
-			</Row>
+    <div class="zhan_mian">
+        <div ref="mian">
+            <Row>
+                <Col :span="4">
+                <span>手机号：</span>
+                <Input v-model="phone" placeholder="请输入..." style="width: 100px" size="small" @on-enter="check"></Input>
+                </Col>
+                <Col :span="12">
+                <span>时间搜索：</span>
+                <DatePicker type="daterange" :v-model="options1" :options="options2" size="small" placement="bottom-start" placeholder="请选择日期" style="width: 200px" format="yyyy-MM-dd" @on-change="dataChange"></DatePicker>
+                <Button type="info" size="small" icon="ios-search" @click="check">搜索</Button>
+                </Col>
+            </Row>
+            <Row>
+                <Col :span="2" style="margin-top:20px;">
+                <div class="search" style="width:60px">
+                    <Button @click="baobei">
+                        <Icon type="document-text" color="#2db7f5"></Icon>
+                        <span>报备</span>
+                    </Button>
+                </div>
+                </Col>
+            </Row>
 
-			<Row class="table">
-				<Col :span="24">
-				<Table :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
-				<div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
+            <Row class="table">
+                <Col :span="24">
+                <Table :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
+                <div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
 									align-items: center;
 									justify-content: center;background: rgba(210, 216, 222, 0.5);" v-if="loading">
-					<Spin size="large"></Spin>
-					<h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
-				</div>
-				</Col>
-				<Col :span="8" style="margin-top: 10px;" class="page">
-				<p>共{{total}}记录，每页显示{{pageSize}}条，共{{Math.ceil(total/pageSize)}}页</p>
-				</Col>
-				<Col :span="16" class="pageP" style="text-align: right;margin-top: 10px;">
-				<!-- @on-change="setInitPage" -->
-				<Page :total="total" :current="pageNum" show-sizer show-elevator :page-size-opts="array" :page-size="pageSize" @on-change="changepage" @on-page-size-change="pageChange">
-				</Page>
-				</Col>
-			</Row>
-			<!-- 模块框 -->
-			<!-- 2未注册用户报备 -->
-			<Modal v-model="modal2" width="360" :styles="{top: '200px'}" :mask-closable="false">
+                    <Spin size="large"></Spin>
+                    <h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
+                </div>
+                </Col>
+                <Col :span="8" style="margin-top: 10px;" class="page">
+                <p>共{{total}}记录，每页显示{{pageSize}}条，共{{Math.ceil(total/pageSize)}}页</p>
+                </Col>
+                <Col :span="16" class="pageP" style="text-align: right;margin-top: 10px;">
+                <!-- @on-change="setInitPage" -->
+                <Page :total="total" :current="pageNum" show-sizer show-elevator :page-size-opts="array" :page-size="pageSize" @on-change="changepage" @on-page-size-change="pageChange">
+                </Page>
+                </Col>
+            </Row>
+            <!-- 模块框 -->
+            <!-- 2未注册用户报备 -->
+            <Modal v-model="modal2" width="360" :styles="{top: '200px'}" :mask-closable="false">
                 <Spin size="large" fix v-if="spinShow"></Spin>
-				<p slot="header" style="color:#2db7f5">
-					<span>未注册用户报备</span>
-				</p>
-				<Form label-position="top" ref="formCustom" :model="formCustom" :rules="ruleCustom3">
-					<div>
-						<Row :gutter="16">
-							<Col span="12">
-							<FormItem label="手机号码：" prop="userName">
-								<Input size="small" v-model="formCustom.userName"></Input>
-							</FormItem>
-							</Col>
-							<Col span="12">
-							<FormItem label="登录密码：" prop="passWord">
-								<Input size="small" v-model="formCustom.passWord"></Input>
-							</FormItem>
-							</Col>
-							<Col span="12">
-							<FormItem label="验证码" prop="userNameCode">
-								<Input size="small" v-model="formCustom.userNameCode"></Input>
-							</FormItem>
-							</Col>
-							<Col span="12">
-							<FormItem label=" ">
-								<Button type="info" v-show="Code" @click="authCode">发送验证码</Button>
-								<Button v-show="!Code">{{count}}s后重新发送</Button>
-							</FormItem>
-							</Col>
-							<Col span="24">
-							<FormItem label="真实姓名" prop="trueName">
-								<Input size="small" v-model="formCustom.trueName"></Input>
-							</FormItem>
-							</Col>
-							<Col span="24">
-							<FormItem label="身份证验证" prop="IDCard">
-								<Input size="small" v-model="formCustom.IDCard"></Input>
-								<span class="idnumChild">*只可报备未注册用户</span>
-							</FormItem>
-							</Col>
-						</Row>
-						<Row style="text-align:center;margin-bottom:-30px">
-							<Col span="24">
-							<FormItem>
-								<Button type="primary" @click="quickBaobei('formCustom')">确定</Button>
-								<Button type="ghost" @click="quickReset('formCustom')" style="margin-left: 8px">取消</Button>
-							</FormItem>
-							</Col>
-						</Row>
-					</div>
-				</Form>
-				<div slot="footer" style="display:none">
-				</div>
-			</Modal>
-		</div>
-	</div>
+                <p slot="header" style="color:#2db7f5">
+                    <span>未注册用户报备</span>
+                </p>
+                <Form label-position="top" ref="formCustom" :model="formCustom" :rules="ruleCustom3">
+                    <div>
+                        <Row :gutter="16">
+                            <Col span="12">
+                            <FormItem label="手机号码：" prop="userName">
+                                <Input size="small" v-model="formCustom.userName"></Input>
+                            </FormItem>
+                            </Col>
+                            <Col span="12">
+                            <FormItem label="登录密码：" prop="passWord">
+                                <Input size="small" v-model="formCustom.passWord"></Input>
+                            </FormItem>
+                            </Col>
+                            <Col span="12">
+                            <FormItem label="验证码" prop="userNameCode">
+                                <Input size="small" v-model="formCustom.userNameCode"></Input>
+                            </FormItem>
+                            </Col>
+                            <Col span="12">
+                            <FormItem label=" ">
+                                <Button type="info" v-show="Code" @click="authCode">发送验证码</Button>
+                                <Button v-show="!Code">{{count}}s后重新发送</Button>
+                            </FormItem>
+                            </Col>
+                            <Col span="24">
+                            <FormItem label="真实姓名" prop="trueName">
+                                <Input size="small" v-model="formCustom.trueName"></Input>
+                            </FormItem>
+                            </Col>
+                            <Col span="24">
+                            <FormItem label="身份证验证" prop="IDCard">
+                                <Input size="small" v-model="formCustom.IDCard"></Input>
+                                <span class="idnumChild">*只可报备未注册用户</span>
+                            </FormItem>
+                            </Col>
+                        </Row>
+                        <Row style="text-align:center;margin-bottom:-30px">
+                            <Col span="24">
+                            <FormItem>
+                                <Button type="primary" @click="quickBaobei('formCustom')">确定</Button>
+                                <Button type="ghost" @click="quickReset('formCustom')" style="margin-left: 8px">取消</Button>
+                            </FormItem>
+                            </Col>
+                        </Row>
+                    </div>
+                </Form>
+                <div slot="footer" style="display:none">
+                </div>
+            </Modal>
+        </div>
+    </div>
 </template>
 
 
@@ -108,7 +108,7 @@
 export default {
     data() {
         return {
-            spinShow:false,
+            spinShow: false,
             loading: false,
             branch: "",
             addr: "",
@@ -121,7 +121,7 @@ export default {
             modal2: false,
             userId: "",
             IsAgentId: "",
-            agentUsername:'',
+            agentUsername: "",
             formCustom: {
                 userName: "",
                 passWord: "",
@@ -418,7 +418,7 @@ export default {
     },
     created() {
         this.IsAgentId = this.$store.getters.uid;
-        this.agentUsername =  this.$store.getters.userName;
+        this.agentUsername = this.$store.getters.userName;
     },
     methods: {
         selChange(sel) {
@@ -428,18 +428,18 @@ export default {
             if (this.pageNum != 1) {
                 this.pageNum = 1;
             }
-            this.Axios();
+            this.baseData();
         },
         dataChange(event) {
             this.options1 = event;
             // this.startTime = event[0]
             // this.endTime = event[1]
-            this.Axios();
+            this.baseData();
         },
         enter() {
             // console.log(123);
         },
-        Axios() {
+        baseData() {
             let data = {
                 // agentId:this.$store.getters.uid,
                 agentId: this.$store.getters.uid,
@@ -450,17 +450,13 @@ export default {
                 pageSize: this.pageSize
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API + "/agent/UserManage/v1/userMessageList",
-                data
-            )
-                .then(reponse => {
-                    // console.log(reponse);
+            this.$store
+                .dispatch("z_ZSHXX", data)
+                .then(res => {
                     this.loading = false;
-                    var res = reponse.result;
-                    if (res != null) {
-                        this.data1 = res.list;
-                        this.total = res.total;
+                    if (res.result != null) {
+                        this.data1 = res.result.list;
+                        this.total = res.result.total;
                     }
                     //this.$Message.success(reponse.message)
                 })
@@ -478,11 +474,11 @@ export default {
         },
         changepage(index) {
             this.pageNum = index;
-            this.Axios();
+            this.baseData();
         },
         pageChange(index) {
             this.pageSize = index;
-            this.Axios();
+            this.baseData();
         },
         // 快速报备接口
         BaobeiAxios() {
@@ -510,12 +506,12 @@ export default {
                     // console.log(res.code);
                     if (reponse.code == 0) {
                         this.modal2 = false;
-                       this.Code = true;
+                        this.Code = true;
                     }
                     this.$Message.info(reponse.message);
                 })
                 .catch(err => {
-                     this.spinShow = false;
+                    this.spinShow = false;
                     // console.log(err);
                     this.$Message.error(err.message);
                 });
@@ -532,25 +528,22 @@ export default {
                 .then(reponse => {
                     this.loading = false;
                     console.log(reponse.code);
-                        const TIME_COUNT = 59;
-                        this.spinShow = false;
-                        this.$Message.success(reponse.message)
-                        if (!this.timer) {
-                            this.count = TIME_COUNT;
-                            this.Code = false;
-                            this.timer = setInterval(() => {
-                                if (
-                                    this.count > 0 &&
-                                    this.count <= TIME_COUNT
-                                ) {
-                                    this.count--;
-                                } else {
-                                    this.Code = true;
-                                    clearInterval(this.timer);
-                                    this.timer = null;
-                                }
-                            }, 1000);
-                        }
+                    const TIME_COUNT = 59;
+                    this.spinShow = false;
+                    this.$Message.success(reponse.message);
+                    if (!this.timer) {
+                        this.count = TIME_COUNT;
+                        this.Code = false;
+                        this.timer = setInterval(() => {
+                            if (this.count > 0 && this.count <= TIME_COUNT) {
+                                this.count--;
+                            } else {
+                                this.Code = true;
+                                clearInterval(this.timer);
+                                this.timer = null;
+                            }
+                        }, 1000);
+                    }
                 })
                 .catch(err => {
                     this.spinShow = false;
@@ -575,9 +568,9 @@ export default {
                 this.$Message.info("输入框不能为空");
             } else {
                 this.BaobeiAxios();
-                
+
                 this.$refs[name].resetFields();
-                 this.spinShow = true;
+                this.spinShow = true;
             }
         },
         quickReset(name) {
@@ -600,7 +593,7 @@ export default {
         }
     },
     mounted() {
-        this.Axios();
+        this.baseData();
     }
 };
 </script>

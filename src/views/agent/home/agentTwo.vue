@@ -54,19 +54,15 @@ export default {
     },
 
     methods: {
-        freezeList() {
+        baseData() {
             this.loading = true;
-            let params = {
+            let data = {
                 userId: this.$store.getters.uid
             };
-            this.get(process.env.BASE_API + "/agent/panel/freeze", params)
-                .then(reponse => {
-					// console.log(reponse);
+            this.$store.dispatch('k_DJJEPM',data)
+                .then(res => {//  /agent/panel/freeze
                     this.loading = false;
-
-                    var res = reponse.result.list;
-                    
-                    this.data1 = res;
+                    this.data1 = res.result.list;
                     //this.$Message.success(reponse.message);
                 })
                 .catch(error => {
@@ -86,7 +82,7 @@ export default {
         }
     },
     mounted() {
-		this.freezeList();
+		this.baseData();
 	}
 };
 </script>

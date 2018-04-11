@@ -1,28 +1,28 @@
 <template>
-	<div class="mian">
+    <div class="mian">
 
-		<div class="age">
-			<span class="age_one">操作日志</span>
-			<!-- {name:'list',params:{totals:user1}} -->
-			<router-link :to="{name:'子商户日志'}">
-				<Button style="margin-top: -10px;" type="primary" shape="circle">MORE>></Button>
-			</router-link>
-		</div>
-		<hr style="height:1px;border:none;border-top:1px solid #ccc;" />
-		<Row>
-			<Row class="table" id="table">
-				<Col :span="24">
-				<Table size='small' :row-class-name="rowClassName" :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
-				<div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
+        <div class="age">
+            <span class="age_one">操作日志</span>
+            <!-- {name:'list',params:{totals:user1}} -->
+            <router-link :to="{name:'子商户日志'}">
+                <Button style="margin-top: -10px;" type="primary" shape="circle">MORE>></Button>
+            </router-link>
+        </div>
+        <hr style="height:1px;border:none;border-top:1px solid #ccc;" />
+        <Row>
+            <Row class="table" id="table">
+                <Col :span="24">
+                <Table size='small' :row-class-name="rowClassName" :columns="columns1" :data="data1" ref='table' @on-selection-change='selChange'></Table>
+                <div style="position:absolute;top:0px;width:100%;height:100%;display: flex;
 									align-items: center;
 									justify-content: center;background: rgba(210, 216, 222, 0.5);" v-if="loading">
-					<Spin size="large"></Spin>
-					<h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
-				</div>
-				</Col>
-			</Row>
-		</Row>
-	</div>
+                    <Spin size="large"></Spin>
+                    <h6 style="color:#2d8cf0;margin-top:10px;">正在获取数据...</h6>
+                </div>
+                </Col>
+            </Row>
+        </Row>
+    </div>
 </template>
 <script>
 import axios from "axios";
@@ -66,8 +66,28 @@ export default {
             page: 1
         };
     },
-    mounted() {},
+      mounted() {
+        this.baseData();
+    },
     methods: {
+        baseData() {
+            this.loading = true;
+            let data = {
+                userId: this.$store.getters.uid,
+                pageSize: 10,
+                currentPage: "",
+                trueName: ""
+            };
+            this.$store.dispatch('k_CZRZ',data).then(res => {
+                this.loading = false;
+                this.data1 = res.result.list;
+                //this.$Message.success(reponse.message);
+            })
+            .catch(error => {
+                this.$Message.error(error.message);
+                // //alert('网络错误')
+            });
+        },
         rowClassName(row, index) {
             if (index % 2 == 0) {
                 return "demo-table-info-row";
@@ -78,27 +98,8 @@ export default {
             this.selItem = sel;
             console.log(sel);
         }
-    },
-    mounted() {
-		this.loading = true;
-		let data = {
-			userId:this.$store.getters.uid,
-			pageSize:10,
-			currentPage:'',
-			trueName:''
-		}
-        this.post(process.env.BASE_API + "/agent/appLogin",data)
-            .then(reponse => {
-                this.loading = false;
-                var res = reponse.result.list;
-                this.data1 = res;
-                //this.$Message.success(reponse.message);
-            })
-            .catch(error => {
-                this.$Message.error(error.message);
-                // //alert('网络错误')
-            });
     }
+  
 };
 </script>
 
