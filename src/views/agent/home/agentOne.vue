@@ -78,7 +78,7 @@ export default {
                 currentPage: "",
                 trueName: ""
             };
-            this.$store.dispatch('k_CZRZ',data).then(res => {
+            this.$store.dispatch('p_CZRZ',data).then(res => {
                 this.loading = false;
                 this.data1 = res.result.list;
                 //this.$Message.success(reponse.message);

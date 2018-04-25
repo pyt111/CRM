@@ -192,7 +192,7 @@ export default {
             };
             this.loading = true;
            
-             this.$store.dispatch('k_TZDT',data)
+             this.$store.dispatch('p_TZDT',data)
                 .then(res => {
                     this.loading = false;
                     this.data1 = res.result.list;
