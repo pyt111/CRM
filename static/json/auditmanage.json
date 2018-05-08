@@ -1,0 +1,285 @@
+{ "total":[
+    
+    {   
+		"uuID":"55555",
+		"userLevel": "厂房建设",
+		"userId": "贵阳***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "已同步",
+		"way":"等额本息",
+		"statuss":"待审核",
+		"cellClassName": {
+			"creationTime": "creationTime1",
+			"statuss":"statuss3" 
+		}
+		
+	},{  
+		"uuID":"2", 
+		"userLevel": "厂房建设",
+		"userId": "上海***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "无法同步",
+		"way":"等额本息",
+		"statuss":"审核失败",
+		"cellClassName": {
+			"creationTime": "creationTime2",
+			"statuss":"statuss2"
+		}
+		
+	},{  
+		"uuID":"3", 
+		"userLevel": "厂房建设",
+		"userId": "北京***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "未同步",
+		"way":"等额本息",
+		"statuss":"审核通过",
+		"cellClassName": {
+			"creationTime": "creationTime3" ,
+			"statuss": "statuss1" 
+		}
+		
+	},{   
+		"uuID":"4",
+		"userLevel": "厂房建设",
+		"userId": "贵阳***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "已同步",
+		"way":"等额本息",
+		"statuss":"待审核",
+		"cellClassName": {
+			"creationTime": "creationTime1",
+			"statuss":"statuss3" 
+		}
+		
+	},{  
+		"uuID":"5", 
+		"userLevel": "厂房建设",
+		"userId": "上海***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "无法同步",
+		"way":"等额本息",
+		"statuss":"审核失败",
+		"cellClassName": {
+			"creationTime": "creationTime2",
+			"statuss":"statuss2"
+		}
+		
+	},{   
+		"uuID":"6",
+		"userLevel": "厂房建设",
+		"userId": "北京***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "未同步",
+		"way":"等额本息",
+		"statuss":"审核通过",
+		"cellClassName": {
+			"creationTime": "creationTime3" ,
+			"statuss": "statuss1" 
+		}
+		
+	},{   
+		"uuID":"7",
+		"userLevel": "厂房建设",
+		"userId": "贵阳***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "已同步",
+		"way":"等额本息",
+		"statuss":"待审核",
+		"cellClassName": {
+			"creationTime": "creationTime1",
+			"statuss":"statuss3" 
+		}
+		
+	},{   
+		"uuID":"8",
+		"userLevel": "厂房建设",
+		"userId": "上海***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "无法同步",
+		"way":"等额本息",
+		"statuss":"审核失败",
+		"cellClassName": {
+			"creationTime": "creationTime2",
+			"statuss":"statuss2"
+		}
+		
+	},{   
+		"uuID":"9",
+		"userLevel": "厂房建设",
+		"userId": "北京***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "未同步",
+		"way":"等额本息",
+		"statuss":"审核通过",
+		"cellClassName": {
+			"creationTime": "creationTime3" ,
+			"statuss": "statuss1" 
+		}
+		
+	},{   
+		"uuID":"10",
+		"userLevel": "厂房建设",
+		"userId": "贵阳***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "已同步",
+		"way":"等额本息",
+		"statuss":"待审核",
+		"cellClassName": {
+			"creationTime": "creationTime1",
+			"statuss":"statuss3" 
+		}
+		
+	},{   
+		"uuID":"11",
+		"userLevel": "厂房建设",
+		"userId": "上海***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "无法同步",
+		"way":"等额本息",
+		"statuss":"审核失败",
+		"cellClassName": {
+			"creationTime": "creationTime2",
+			"statuss":"statuss2"
+		}
+		
+	},{   
+		"userLevel": "厂房建设",
+		"userId": "北京***公司",
+		"userBalance": "1000000",
+		"fenRunBalance": "365",
+		"amountFrozen": "12",
+		"name": "11%",
+		"idNumber": "10000",
+		"registrationWay": "九月惠发",
+		"creationTime": "未同步",
+		"way":"等额本息",
+		"statuss":"审核通过",
+		"cellClassName": {
+			"creationTime": "creationTime3" ,
+			"statuss": "statuss1" 
+		}
+		
+	},
+    {
+		"userLevel": "二级",
+		"userId": 9,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "马总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	},
+    {
+		"userLevel": "二级",
+		"userId": 10,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "雷总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	},
+    {
+		"userLevel": "二级",
+		"userId": 11,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "刘总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	},
+    {
+		"userLevel": "二级",
+		"userId": 12,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "习总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	},
+    {
+		"userLevel": "二级",
+		"userId": 13,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "巴总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	},
+    {
+		"userLevel": "二级",
+		"userId": 14,
+		"userBalance": "1000000",
+		"fenRunBalance": "30000",
+		"amountFrozen": "25000",
+		"name": "比总",
+		"idNumber": "522401199401016411",
+		"registrationWay": "手机APP",
+		"creationTime": "2017/11/10"
+	}
+]}

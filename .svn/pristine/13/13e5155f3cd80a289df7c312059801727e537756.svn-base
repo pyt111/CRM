@@ -1,213 +1,213 @@
 <template>
-    <navbar>
-        <div class="yeji">业绩管理系统</div>
-        <ul class="nav navbar-nav ml-auto">
-            <!-- 四个 -->
-            <modal-one></modal-one>
+  <navbar>
+    <div class="yeji">业绩管理系统</div>
+    <ul class="nav navbar-nav ml-auto">
+      <!-- 四个 -->
+      <modal-one></modal-one>
 
-            <li class="nav-item d-md-down-none" v-if="show!='admins'">
-                <Button @click="tixian" size="small" type="info">
-                    <Icon type="card"></Icon>
-                    <span>快速提现</span>
-                </Button>
-            </li>
-            <li class="nav-item d-md-down-none" v-if="show!='admins'">
-                <Button @click="baobei" size="small" type="info">
-                    <Icon type="document-text"></Icon>
-                    <span>快速报备</span>
-                </Button>
-            </li>
-            <li class="nav-item d-md-down-none">
-                <p @click="oneSelf" style="cursor:pointer;color:#fff">
-                    <span slot="button">
-                        <img src="../../static/img/shouye/agent.png" class="img-avatar" alt="o">
-                        <span class="d-md-down-none">{{show}}余惠宝</span>
-                    </span>
-                </p>
-            </li>
-            <li class="nav-item d-md-down-none">
-                <a href="javascript:void(0)">
-                    <span>{{nowTime}}</span>
-                    <span>{{nowWeek}} </span>
-                </a>
-            </li>
-            <li class="nav-item d-md-down-none">
-                <a href="" @click="Logout">
-                    <p class="dropdown-itemp">
-                        <Icon type="power" color="red"></Icon>
-                    </p>
-                </a>
-            </li>
+      <li class="nav-item d-md-down-none" v-if="show!='admins'">
+        <Button @click="tixian" size="small" type="info">
+          <Icon type="card"></Icon>
+          <span>快速提现</span>
+        </Button>
+      </li>
+      <li class="nav-item d-md-down-none" v-if="show!='admins'">
+        <Button @click="baobei" size="small" type="info">
+          <Icon type="document-text"></Icon>
+          <span>快速报备</span>
+        </Button>
+      </li>
+      <li class="nav-item d-md-down-none">
+        <p @click="oneSelf" style="cursor:pointer;color:#fff">
+          <span slot="button">
+            <img src="../../static/img/shouye/agent.png" class="img-avatar" alt="o">
+            <span class="d-md-down-none">{{show}}余惠宝</span>
+          </span>
+        </p>
+      </li>
+      <li class="nav-item d-md-down-none">
+        <a href="javascript:void(0)">
+          <span>{{nowTime}}</span>
+          <span>{{nowWeek}} </span>
+        </a>
+      </li>
+      <li class="nav-item d-md-down-none">
+        <a href="" @click="Logout">
+          <p class="dropdown-itemp">
+            <Icon type="power" color="red"></Icon>
+          </p>
+        </a>
+      </li>
 
-        </ul>
-        <!-- 模块框 -->
-        <div>
-            <!-- 1报备模块框 -->
-            <Modal v-model="modal1" width="360" :styles="{top: '300px'}" :mask-closable="false">
-                <p slot="header" style="color:#2db7f5">
-                    <span>报备</span>
-                </p>
-                <div style="text-align:center;height:50px">
-                    <Row :gutter="16" v-show="show !='financial'" style="margin-top:15px">
-                        <Col span="12">
-                        <div class="modal1_zhu" @click="modal1_ok">已注册用户报备</div>
-                        </Col>
-                        <Col span="12">
-                        <div class="modal1_zhu" @click="modal1_no">未注册用户报备</div>
-                        </Col>
-                    </Row>
-                </div>
-                <div slot="footer" style="display:none">
-                    <Button type="error">Delete</Button>
-                </div>
-            </Modal>
-            <!-- 2未注册用户报备 -->
-            <Modal v-model="modal2" width="360" :styles="{top: '200px'}" :mask-closable="false">
-                <Spin size="large" fix v-if="spinShow"></Spin>
-                <p slot="header" style="color:#2db7f5">
-                    <span>未注册用户报备</span>
-                </p>
-                <Form label-position="top" ref="formCustom" :model="formCustom" :rules="ruleCustom3">
-                    <div>
-                        <Row :gutter="16">
-                            <Col span="12">
-                            <FormItem label="手机号码：" prop="userName">
-                                <Input size="small" v-model="formCustom.userName"></Input>
-                            </FormItem>
-                            </Col>
-                            <Col span="12">
-                            <FormItem label="登录密码：" prop="passWord">
-                                <Input size="small" v-model="formCustom.passWord"></Input>
-                            </FormItem>
-                            </Col>
-                            <Col span="12">
-                            <FormItem label="验证码" prop="userNameCode">
-                                <Input size="small" v-model="formCustom.userNameCode"></Input>
-                            </FormItem>
-                            </Col>
-                            <Col span="12">
-                            <FormItem label=" ">
-                                <Button type="info" v-show="Code" @click="authCode">发送验证码</Button>
-                                <Button v-show="!Code">{{count}}s后重新发送</Button>
-                            </FormItem>
-                            </Col>
-                            <Col span="24">
-                            <FormItem label="真实姓名" prop="trueName">
-                                <Input size="small" v-model="formCustom.trueName"></Input>
-                            </FormItem>
-                            </Col>
-                            <Col span="24">
-                            <FormItem label="身份证" prop="IDCard" class="idNum">
-                                <Input size="small" v-model="formCustom.IDCard"></Input>
-                                <span class="idnumChild">*只可报备未注册用户</span>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                        <Row style="text-align:center;margin-bottom:-30px">
-                            <Col span="24">
-                            <FormItem>
-                                <Button type="primary" @click="quickBaobei('formCustom')">确定</Button>
-                                <Button type="ghost" @click="quickReset('formCustom')" style="margin-left: 8px">取消</Button>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                    </div>
-                </Form>
-                <div slot="footer" style="display:none">
-                </div>
-            </Modal>
-            <!-- 3已注册用户报备 -->
-            <Modal v-model="modal3" width="360" :styles="{top: '200px'}" :mask-closable="false">
-                <p slot="header" style="color:#2db7f5">
-                    <span>已注册用户报备</span>
-                </p>
-                <Form label-position="top" ref="formCustom1" :model="formCustom1" :rules="ruleCustom1">
-                    <div>
-                        <Row :gutter="16">
-                            <Col span="12">
-                            <FormItem label="手机号码：" prop="one">
-                                <Input size="small" v-model="formCustom1.one"></Input>
-                            </FormItem>
-                            </Col>
-                            <Col span="12">
-                            <FormItem label="用户注册时间：" prop="two">
-                                <DatePicker placement="bottom" type="date" size="small" v-model="formCustom1.two"></DatePicker>
-
-                            </FormItem>
-                            </Col>
-                            <Col span="24">
-                            <FormItem label="备注：" prop="three">
-                                <Input size="small" type="textarea" :rows="3" v-model="formCustom1.three"></Input>
-                                <Icon type="ios-medical" color="red"></Icon>
-                                <span style="color:red">只可报备已注册用户</span>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                        <Row style="text-align:center;margin-bottom:-30px">
-                            <Col span="24">
-                            <FormItem>
-                                <Button type="primary" @click="handleSubmit1('formCustom1')">确定</Button>
-                                <Button type="ghost" @click="handleReset('formCustom1')" style="margin-left: 8px">取消</Button>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                    </div>
-                </Form>
-                <div slot="footer" style="display:none">
-                </div>
-            </Modal>
-            <!-- 提成提现 -->
-            <Modal v-model="modal" width="500" :styles="{top: '200px'}" :mask-closable="false">
-                <p slot="header" style="color:#2db7f5">
-                    <span>提成提现</span>
-                </p>
-                <Form label-position="top" ref="modals" :model="modals">
-                    <div>
-                        <Row :gutter="16">
-                            <Col span="24">
-                            <div class="tiBank">
-                                <div class="tiBank_one">
-                                    <img style="width:30px;height:30px;margin-top:5px" :src="modals.img" alt="">
-                                    <p style="margin-left:15px">{{modals.bankName}}</p>
-                                    <p style="margin-left:15px">尾号：{{modals.bankNumber}}</p>
-                                </div>
-                                <div style="margin-right:15px">单笔最大金额：{{modals.everyPrice}}w元</div>
-                            </div>
-                            </Col>
-                            <Col span="24" style="margin-top:20px">
-                            <div style="display:flex;">
-                                <p style="flex:1">可提现金额：
-                                    <span style="color:red">{{modals.userBalance}}</span> 元</p>
-                                <Button type="primary" size="small" style="margin-left: 8px" @click="modalsAll">全部提现</Button>
-                            </div>
-                            </Col>
-                            <Col span="24" style="margin-top:20px">
-                            <FormItem label="提现金额：">
-                                <Input v-model="allUserBalance"></Input>
-                                <p>手续费：本次提现收取
-                                    <span style="color:red">{{modals.poundage}}</span>元
-                                    <span :class="[showText ? 'hide' : 'show']" style="color:red;float:right;">*提现金额需要大于{{modals.poundage}}元小于{{modals.everyPrice}}w</span>
-                                    <span :class="[showText2 ? 'hide' : 'show']" style="color:red;float:right;">*提现金额不足</span>
-                                </p>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                        <Row style="text-align:center;margin-bottom:-30px">
-                            <Col span="24">
-                            <FormItem>
-                                <Button type="primary" @click="modalsOk('modals')">确定</Button>
-                                <Button type="ghost" @click="modalsNo('modals')" style="margin-left: 8px">取消</Button>
-                            </FormItem>
-                            </Col>
-                        </Row>
-                    </div>
-                </Form>
-                <div slot="footer" style="display:none">
-                </div>
-            </Modal>
-
+    </ul>
+    <!-- 模块框 -->
+    <div>
+      <!-- 1报备模块框 -->
+      <Modal v-model="modal1" width="360" :styles="{top: '300px'}" :mask-closable="false">
+        <p slot="header" style="color:#2db7f5">
+          <span>报备</span>
+        </p>
+        <div style="text-align:center;height:50px">
+          <Row :gutter="16" v-show="show !='financial'" style="margin-top:15px">
+            <Col span="12">
+            <div class="modal1_zhu" @click="modal1_ok">已注册用户报备</div>
+            </Col>
+            <Col span="12">
+            <div class="modal1_zhu" @click="modal1_no">未注册用户报备</div>
+            </Col>
+          </Row>
         </div>
-    </navbar>
+        <div slot="footer" style="display:none">
+          <Button type="error">Delete</Button>
+        </div>
+      </Modal>
+      <!-- 2未注册用户报备 -->
+      <Modal v-model="modal2" width="360" :styles="{top: '200px'}" :mask-closable="false">
+        <Spin size="large" fix v-if="spinShow"></Spin>
+        <p slot="header" style="color:#2db7f5">
+          <span>未注册用户报备</span>
+        </p>
+        <Form label-position="top" ref="formCustom" :model="formCustom" :rules="ruleCustom3">
+          <div>
+            <Row :gutter="16">
+              <Col span="12">
+              <FormItem label="手机号码：" prop="userName">
+                <Input size="small" v-model="formCustom.userName"></Input>
+              </FormItem>
+              </Col>
+              <Col span="12">
+              <FormItem label="登录密码：" prop="passWord">
+                <Input size="small" v-model="formCustom.passWord"></Input>
+              </FormItem>
+              </Col>
+              <Col span="12">
+              <FormItem label="验证码" prop="userNameCode">
+                <Input size="small" v-model="formCustom.userNameCode"></Input>
+              </FormItem>
+              </Col>
+              <Col span="12">
+              <FormItem label=" ">
+                <Button type="info" v-show="Code" @click="authCode">发送验证码</Button>
+                <Button v-show="!Code">{{count}}s后重新发送</Button>
+              </FormItem>
+              </Col>
+              <Col span="24">
+              <FormItem label="真实姓名" prop="trueName">
+                <Input size="small" v-model="formCustom.trueName"></Input>
+              </FormItem>
+              </Col>
+              <Col span="24">
+              <FormItem label="身份证" prop="IDCard" class="idNum">
+                <Input size="small" v-model="formCustom.IDCard"></Input>
+                <span class="idnumChild">*只可报备未注册用户</span>
+              </FormItem>
+              </Col>
+            </Row>
+            <Row style="text-align:center;margin-bottom:-30px">
+              <Col span="24">
+              <FormItem>
+                <Button type="primary" @click="quickBaobei('formCustom')">确定</Button>
+                <Button type="ghost" @click="quickReset('formCustom')" style="margin-left: 8px">取消</Button>
+              </FormItem>
+              </Col>
+            </Row>
+          </div>
+        </Form>
+        <div slot="footer" style="display:none">
+        </div>
+      </Modal>
+      <!-- 3已注册用户报备 -->
+      <Modal v-model="modal3" width="360" :styles="{top: '200px'}" :mask-closable="false">
+        <p slot="header" style="color:#2db7f5">
+          <span>已注册用户报备</span>
+        </p>
+        <Form label-position="top" ref="formCustom1" :model="formCustom1" :rules="ruleCustom1">
+          <div>
+            <Row :gutter="16">
+              <Col span="12">
+              <FormItem label="手机号码：" prop="one">
+                <Input size="small" v-model="formCustom1.one"></Input>
+              </FormItem>
+              </Col>
+              <Col span="12">
+              <FormItem label="用户注册时间：" prop="two">
+                <DatePicker placement="bottom" type="date" size="small" v-model="formCustom1.two"></DatePicker>
+
+              </FormItem>
+              </Col>
+              <Col span="24">
+              <FormItem label="备注：" prop="three">
+                <Input size="small" type="textarea" :rows="3" v-model="formCustom1.three"></Input>
+                <Icon type="ios-medical" color="red"></Icon>
+                <span style="color:red">只可报备已注册用户</span>
+              </FormItem>
+              </Col>
+            </Row>
+            <Row style="text-align:center;margin-bottom:-30px">
+              <Col span="24">
+              <FormItem>
+                <Button type="primary" @click="handleSubmit1('formCustom1')">确定</Button>
+                <Button type="ghost" @click="handleReset('formCustom1')" style="margin-left: 8px">取消</Button>
+              </FormItem>
+              </Col>
+            </Row>
+          </div>
+        </Form>
+        <div slot="footer" style="display:none">
+        </div>
+      </Modal>
+      <!-- 提成提现 -->
+      <Modal v-model="modal" width="500" :styles="{top: '200px'}" :mask-closable="false">
+        <p slot="header" style="color:#2db7f5">
+          <span>提成提现</span>
+        </p>
+        <Form label-position="top" ref="modals" :model="modals">
+          <div>
+            <Row :gutter="16">
+              <Col span="24">
+              <div class="tiBank">
+                <div class="tiBank_one">
+                  <img style="width:30px;height:30px;margin-top:5px" :src="modals.img" alt="">
+                  <p style="margin-left:15px">{{modals.bankName}}</p>
+                  <p style="margin-left:15px">尾号：{{modals.bankNumber}}</p>
+                </div>
+                <div style="margin-right:15px">单笔最大金额：{{modals.everyPrice}}w元</div>
+              </div>
+              </Col>
+              <Col span="24" style="margin-top:20px">
+              <div style="display:flex;">
+                <p style="flex:1">可提现金额：
+                  <span style="color:red">{{modals.userBalance}}</span> 元</p>
+                <Button type="primary" size="small" style="margin-left: 8px" @click="modalsAll">全部提现</Button>
+              </div>
+              </Col>
+              <Col span="24" style="margin-top:20px">
+              <FormItem label="提现金额：">
+                <Input v-model="allUserBalance"></Input>
+                <p>手续费：本次提现收取
+                  <span style="color:red">{{modals.poundage}}</span>元
+                  <span :class="[showText ? 'hide' : 'show']" style="color:red;float:right;">*提现金额需要大于{{modals.poundage}}元小于{{modals.everyPrice}}w</span>
+                  <span :class="[showText2 ? 'hide' : 'show']" style="color:red;float:right;">*提现金额不足</span>
+                </p>
+              </FormItem>
+              </Col>
+            </Row>
+            <Row style="text-align:center;margin-bottom:-30px">
+              <Col span="24">
+              <FormItem>
+                <Button type="primary" @click="modalsOk('modals')">确定</Button>
+                <Button type="ghost" @click="modalsNo('modals')" style="margin-left: 8px">取消</Button>
+              </FormItem>
+              </Col>
+            </Row>
+          </div>
+        </Form>
+        <div slot="footer" style="display:none">
+        </div>
+      </Modal>
+
+    </div>
+  </navbar>
 </template>
 <script>
 import navbar from "./Navbar";
@@ -429,8 +429,7 @@ export default {
             };
             // console.log(data.IsAgentId)
             this.loading = true;
-            this.$store
-                .dispatch("p_BBTJ", data)
+            this.post(process.env.BASE_API + "/agent/agentReport", data)
                 .then(reponse => {
                     // console.log(decrypt(reponse.data));
                     this.loading = false;
@@ -445,7 +444,7 @@ export default {
                 })
                 .catch(err => {
                     console.log(err);
-                    this.spinShow = false;
+                     this.spinShow = false;
                     this.$Message.error(err.message);
                 });
         },
@@ -536,11 +535,12 @@ export default {
                 .dispatch("LogOut")
                 .then(response => {
                     console.log(response);
-                    location.reload(); //刷新页面  防止更改登录账户后路由加载不正确导致列表显示不正常
+                    location.reload();//刷新页面  防止更改登录账户后路由加载不正确导致列表显示不正常
                     setTimeout(() => {
                         this.$router.push({ path: "/login" });
+                       
                     }, 1000);
-                    this.$Message.success(response.message);
+                     this.$Message.success(response.message)
                 })
                 .catch(err => {
                     this.$message.error(err);

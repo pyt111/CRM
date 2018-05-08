@@ -47,7 +47,7 @@ export default {
         };
         return {
             loginForm: {
-                email: "13621967792",
+                email: "15821682178",
                 // email: "agent",
                 password: "qwe123"
             },
@@ -93,7 +93,7 @@ export default {
                            
                         })
                         .catch(err => {
-                            // console.log(err);
+                            console.log(err);
                             this.$Message.error(err.message);
                             this.loading = false;
                         });
