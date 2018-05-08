@@ -457,7 +457,8 @@ export default {
             };
             // this.loading = true;
             // process.env.BASE_API
-            this.post(process.env.BASE_API + "/agent/getAgentSms", data)
+            this.$store
+                .dispatch("p_BBDX", data)
                 .then(reponse => {
                     this.loading = false;
                     console.log(reponse.code);
@@ -595,10 +596,8 @@ export default {
                 type: 2
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API + "/agent/commWithdrawalConditions",
-                data
-            )
+            this.$store
+                .dispatch("p_YHKXX", data)
                 .then(reponse => {
                     this.loading = false;
                     let res = reponse.result.dataList;
@@ -637,7 +636,8 @@ export default {
             ) {
                 this.showText2 = true;
                 this.showText = true;
-                this.post(process.env.BASE_API + "/agent/commWithdrawal", data)
+                this.$store
+                    .dispatch("p_KSTX", data)
                     .then(reponse => {
                         this.loading = false;
                         console.log(reponse.code);

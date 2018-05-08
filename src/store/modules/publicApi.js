@@ -1,5 +1,5 @@
 import * as API from 'api/axiosMetonds';
-import { userFrequencyInvestmentList,appLogin,getAgentSms,agentReport } from 'api/url';
+import { userFrequencyInvestmentList,appLogin,getAgentSms,agentReport,commWithdrawal,commWithdrawalConditions } from 'api/url';
 
 const config = {
     state: {
@@ -24,6 +24,12 @@ const config = {
          /**报备 提交*/
          p_BBTJ:async ({commit},data) => {
             return await API.post(agentReport,data).catch(error => {})
+        },
+        p_KSTX:async ({commit},data) => {
+            return await API.post(commWithdrawal,data).catch(error => {})
+        },
+        p_YHKXX:async ({commit},data) => {
+            return await API.post(commWithdrawalConditions,data).catch(error => {})
         },
     
     }
