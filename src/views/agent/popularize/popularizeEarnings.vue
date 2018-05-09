@@ -237,8 +237,10 @@ export default {
             };
             // console.log(data.startTime.length, data.endTime.length);
             // this.post(process.env.BASE_API + "/agent/spread/detail", data)
-             this.$store.dispatch('t_TGSYMXLB',data)
-                .then(res => { // /agent/spread/detail
+            this.$store
+                .dispatch("t_TGSYMXLB", data)
+                .then(res => {
+                    // /agent/spread/detail
                     this.loading = false;
                     // console.log(res);
                     this.data1 = res.result.list;
@@ -265,10 +267,12 @@ export default {
             let data = {
                 userId: this.$store.getters.uid
             };
-            
+
             // this.post(process.env.BASE_API + "/agent/spread/detailCount", data)
-            this.$store.dispatch('t_TGSYMXJE',data)
-                .then(res => { ///agent/spread/detailCoun
+            this.$store
+                .dispatch("t_TGSYMXJE", data)
+                .then(res => {
+                    ///agent/spread/detailCoun
                     console.log(res.result);
                     let resData = res.result;
                     this.achieveSum = resData.achieveSum;
@@ -308,10 +312,8 @@ export default {
                 type: 1
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API + "/agent/commWithdrawalConditions",
-                data
-            )
+            this.$store
+                .dispatch("p_YHKXX", data)
                 .then(reponse => {
                     this.loading = false;
                     let res = reponse.result.dataList;
@@ -350,10 +352,11 @@ export default {
             ) {
                 this.showText2 = true;
                 this.showText = true;
-                this.post(
-                    process.env.BASE_API + "/agent/promoteWithdrawal",
-                    data
-                )
+                this.$store
+                    .dispatch(
+                       "p_TGTX",
+                        data
+                    )
                     .then(reponse => {
                         this.loading = false;
                         console.log(reponse.code);

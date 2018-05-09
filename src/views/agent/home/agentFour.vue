@@ -175,11 +175,10 @@ export default {
                 type: 2
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API + "/agent/commWithdrawalConditions",
-                data
-            )
+            this.$store
+                .dispatch("p_YHKXX", data)
                 .then(reponse => {
+                    console.log(reponse);
                     this.loading = false;
                     let res = reponse.result.dataList;
                     this.modals = res;
@@ -232,7 +231,8 @@ export default {
             ) {
                 this.showText2 = true;
                 this.showText = true;
-                this.post(process.env.BASE_API + "/agent/commWithdrawal", data)
+                this.$store
+                .dispatch("p_KSTX", data)
                     .then(reponse => {
                         this.loading = false;
 

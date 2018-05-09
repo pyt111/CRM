@@ -1,78 +1,78 @@
 <template>
-	<div class="system_mian">
-		<div class="system">
-			<p>推广配置</p>
-		</div>
-		<div class="system_body" style="width:80%;margin-left:10%;margin-top:20px;">
-			<Row :gutter="16">
-				<!-- 方法一 -->
-				<Col span="6">
-				<div class="system_phone">
-					<img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/phone1.png" />
-					<p style="margin-top:20px;font-size:16px;font-weight:600">方法一:代理邀请码</p>
-					<p style="margin-top:20px;">
-						<Input style="width:70%;" v-model="value1" size="small" placeholder="请输入..."></Input>
-					</p>
-					<p style="margin-top:20px;">
-						<Button style="width:70%;" size="small" long v-clipboard:copy="value1" v-clipboard:success="onCopy" v-clipboard:error="onError">
-							复制</Button>
-					</p>
-					<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
-				</div>
-				</Col>
-				<!-- 方法二 -->
-				<Col span="6">
-				<div class="system_phone">
-					<img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/msg3.png" />
-					<p style="margin-top:20px;font-size:16px;font-weight:600">方法二:推广链接邀请</p>
-					<p style="margin-top:20px;">
-						<Input style="width:70%;" v-model="value2" size="small" placeholder="请输入..."></Input>
-					</p>
-					<p style="margin-top:20px;">
-						<Button style="width:70%;" size="small" long v-clipboard:copy="value2" v-clipboard:success="onCopy" v-clipboard:error="onError">
-							复制</Button>
-					</p>
-					<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友点击您发送的以上邀请码链接完成注册，您与好友的推荐关系成功</p>
-				</div>
-				</Col>
-				<!-- 方法三 -->
-				<Col span="6">
-				<div class="system_phones">
-					<img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht1.png" />
-					<p style="margin-top:20px;color:#000;font-size:16px;font-weight:600">方法三:微信邀请</p>
-					<div id="qrcode"></div>
-					<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">扫一扫分享至朋友圈</p>
-				</div>
-				</Col>
-				<!-- 短信邀请 -->
-				<Col span="6">
-				<div class="system_phone">
-					<img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht2.png" />
-					<p style="margin-top:20px;color:#000;font-size:16px">方法四:短信邀请</p>
-					<p style="margin-top:20px;">
-						<Row>
-							<Col span="24">
-							<Input style="" v-model="value2" size="small" placeholder="请输入..."></Input>
-							</Col>
-						</Row>
-					</p>
+    <div class="system_mian">
+        <div class="system">
+            <p>推广配置</p>
+        </div>
+        <div class="system_body" style="width:80%;margin-left:10%;margin-top:20px;">
+            <Row :gutter="16">
+                <!-- 方法一 -->
+                <Col span="6">
+                <div class="system_phone">
+                    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/phone1.png" />
+                    <p style="margin-top:20px;font-size:16px;font-weight:600">方法一:代理邀请码</p>
+                    <p style="margin-top:20px;">
+                        <Input style="width:70%;" v-model="value1" size="small" placeholder="请输入..."></Input>
+                    </p>
+                    <p style="margin-top:20px;">
+                        <Button style="width:70%;" size="small" long v-clipboard:copy="value1" v-clipboard:success="onCopy" v-clipboard:error="onError">
+                            复制</Button>
+                    </p>
+                    <p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
+                </div>
+                </Col>
+                <!-- 方法二 -->
+                <Col span="6">
+                <div class="system_phone">
+                    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/msg3.png" />
+                    <p style="margin-top:20px;font-size:16px;font-weight:600">方法二:推广链接邀请</p>
+                    <p style="margin-top:20px;">
+                        <Input style="width:70%;" v-model="value2" size="small" placeholder="请输入..."></Input>
+                    </p>
+                    <p style="margin-top:20px;">
+                        <Button style="width:70%;" size="small" long v-clipboard:copy="value2" v-clipboard:success="onCopy" v-clipboard:error="onError">
+                            复制</Button>
+                    </p>
+                    <p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友点击您发送的以上邀请码链接完成注册，您与好友的推荐关系成功</p>
+                </div>
+                </Col>
+                <!-- 方法三 -->
+                <Col span="6">
+                <div class="system_phones">
+                    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht1.png" />
+                    <p style="margin-top:20px;color:#000;font-size:16px;font-weight:600">方法三:微信邀请</p>
+                    <div id="qrcode"></div>
+                    <p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">扫一扫分享至朋友圈</p>
+                </div>
+                </Col>
+                <!-- 短信邀请 -->
+                <Col span="6">
+                <div class="system_phone">
+                    <img style="height:30px;width:30px;margin-top:20px;" src="../../../../static/img/icon/wecht2.png" />
+                    <p style="margin-top:20px;color:#000;font-size:16px">方法四:短信邀请</p>
+                    <p style="margin-top:20px;">
+                        <Row>
+                            <Col span="24">
+                            <Input style="" v-model="value2" size="small" placeholder="请输入..."></Input>
+                            </Col>
+                        </Row>
+                    </p>
 
-					<p style="margin-top:20px;">
-						<Row>
-							<Col span="17">
-							<Input v-model="value3" size="small" placeholder="好友手机号"></Input>
-							</Col>
-							<Col span="2">
-							<Button size="small" type="info" @click="send">发送</Button>
-							</Col>
-						</Row>
-					</p>
-					<p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
-				</div>
-				</Col>
-			</Row>
-		</div>
-	</div>
+                    <p style="margin-top:20px;">
+                        <Row>
+                            <Col span="17">
+                            <Input v-model="value3" size="small" placeholder="好友手机号"></Input>
+                            </Col>
+                            <Col span="2">
+                            <Button size="small" type="info" @click="send">发送</Button>
+                            </Col>
+                        </Row>
+                    </p>
+                    <p style="margin-top:20px;width:70%;margin-left:15%;font-size:12px">好友注册时，填写您的推荐人代理码完成注册，推荐关系即成功</p>
+                </div>
+                </Col>
+            </Row>
+        </div>
+    </div>
 </template>
 <script>
 // import axios from 'axios'
@@ -94,11 +94,8 @@ export default {
                 userId: this.$store.getters.uid
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API +
-                    "/agent/PopularizeManage/v1/popularizeSetting",
-                data
-            )
+            this.$store
+                .dispatch("p_TGSZ", data)
                 .then(reponse => {
                     this.loading = false;
                     var res = reponse.result;
@@ -119,11 +116,8 @@ export default {
                 popularizeUrl: this.value2
             };
             this.loading = true;
-            this.post(
-                process.env.BASE_API +
-                    "/agent/PopularizeManage/v1/sendSmsPopularize",
-                data
-            )
+            this.$store
+                .dispatch("p_DXYQ", data)
                 .then(reponse => {
                     this.loading = false;
                     var res = reponse.result;
