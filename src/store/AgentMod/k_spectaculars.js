@@ -11,7 +11,7 @@ const config = {
     actions:{
         /**月度业绩 月度提成 月度新增用户 可提现金额 */
         k_top: async ({commit},data) => {
-            return await API.post(panel,data).catch(error => {})
+            return await API.post(panel,data)
             // return new Promise((resolve,reject) => {
                 // await  API.post(panel,datas)
                 // console.log(await API.post(panel,datas));

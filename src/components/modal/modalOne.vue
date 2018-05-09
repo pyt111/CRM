@@ -1,247 +1,232 @@
 <template>
     <div>
-      <!-- 方法一 -->
-      <li class="nav-item d-md-down-none bao">
-        <Tooltip placement="bottom">
-              <Icon type="android-phone-portrait" class="icons" :size="20"></Icon>
-              <div slot="content" >
-                   <div class="system_phone" style="width:130px">
-                            <p style="font-size:12px;font-weight:600">方法一:代理邀请码</p>
-                            <p style="margin-top:5px;">
-                              <Input style="width:70%;"  v-model="value1" size="small" placeholder="请输入..."></Input>
-                            </p >
-                            <p style="margin-top:5px;">
-                                <Button style="width:70%;"  
-                                      size="small" 
-                                  long 
-                                  v-clipboard:copy="value1"
-                                                    v-clipboard:success="onCopy"
-                                  v-clipboard:error="onError">
-                              复制</Button>
-                            </p>
-                            <p style="margin-top:5px;">好友注册时，填写您的</p>
-                            <p style="margin-top:5px;">推荐人代理码完成注册</p>
-                            <p style="margin-top:5px;">推荐关系即成功</p>
-                      </div>
-              </div>
-          </Tooltip>
-          </li>
-          <!-- //方法二 -->
-          <li class="nav-item d-md-down-none bao">
-          <Tooltip placement="bottom">
-              <Icon type="radio-waves" :size="20" class="icons"></Icon>
-              <div slot="content" >
-                   <div class="system_phone" style="width:130px">
-                            <p style="font-size:12px;font-weight:600">方法二:推广链接邀请</p>
-                            <p style="margin-top:5px;">
-                              <Input style="width:70%;"  v-model="value2" size="small" placeholder="请输入..."></Input>
-                            </p >
-                            <p style="margin-top:5px;">
-                                <Button style="width:70%;"  
-                                      size="small" 
-                                  long 
-                                  v-clipboard:copy="value2"
-                                  v-clipboard:success="onCopy"
-                                  v-clipboard:error="onError">
-                              复制</Button>
-                            </p>
-                            
-                            <p style="margin-top:5px;">好友点击您发送的以上</p>
-                            <p style="margin-top:5px;">邀请码链接完成注册您</p>
-                            <p style="margin-top:5px;">与好友的推荐关系成功</p>
-                      </div>
-              </div>
-          </Tooltip>
-			</li>
-      <!-- 方法三 -->
-      <li class="nav-item d-md-down-none bao" >
-          <Tooltip placement="bottom">
-              <Icon type="ios-chatboxes" :size="20" class="icons"></Icon>
-              <div slot="content" >
-                   <div class="system_phone" style="width:120px">
-                           
-                      <p style="margin-top:5px;font-size:12px;font-weight:600">方法三:微信邀请</p>
-                      <div id="qrCode"></div>
-                      <p style="margin-top:5px;">扫一扫分享至朋友圈</p>
-                   </div>
-              </div>
-          </Tooltip>
-			</li>
-      <!-- 方法四 -->
-      <li class="nav-item d-md-down-none bao">
-          <Tooltip placement="bottom">
-              <Icon type="chatbubble-working" class="icons" :size="20"></Icon>
-              <div slot="content" style="width:120px">
-                   <div class="system_phone">
-                      <p style="margin-top:5px;font-size:12px;font-weight:600">方法四:短信邀请</p>
-                      <p style="margin-top:5px;">
-                        <Input style="width:90%"  v-model="value2" size="small" placeholder="请输入..."></Input>
-                      </p >
-                      <p style="margin-top:5px;width:100%;">
-                          <Row >
-                          <Col span="16" >
-                              <Input  v-model="value3" size="small" placeholder="好友手机号"></Input>
-                          </Col>
-                          <Col span="4">
-                              <Button  size="small" type="info" @click="send">发送</Button>
-                          </Col>
-                        </Row>
-                      </p>
-                      <p style="margin-top:5px;">好友注册时，填写您</p>
-                      <p style="margin-top:5px;">的推荐人代理码完成</p>
-                      <p style="margin-top:5px;">注册推荐关系即成功</p>
+        <!-- 方法一 -->
+        <li class="nav-item d-md-down-none bao">
+            <Tooltip placement="bottom">
+                <Icon type="android-phone-portrait" class="icons" :size="20"></Icon>
+                <div slot="content">
+                    <div class="system_phone" style="width:130px">
+                        <p style="font-size:12px;font-weight:600">方法一:代理邀请码</p>
+                        <p style="margin-top:5px;">
+                            <Input style="width:70%;" v-model="value1" size="small" placeholder="请输入..."></Input>
+                        </p>
+                        <p style="margin-top:5px;">
+                            <Button style="width:70%;" size="small" long v-clipboard:copy="value1" v-clipboard:success="onCopy" v-clipboard:error="onError">
+                                复制</Button>
+                        </p>
+                        <p style="margin-top:5px;">好友注册时，填写您的</p>
+                        <p style="margin-top:5px;">推荐人代理码完成注册</p>
+                        <p style="margin-top:5px;">推荐关系即成功</p>
                     </div>
-              </div>
-          </Tooltip>
-			</li>
+                </div>
+            </Tooltip>
+        </li>
+        <!-- //方法二 -->
+        <li class="nav-item d-md-down-none bao">
+            <Tooltip placement="bottom">
+                <Icon type="radio-waves" :size="20" class="icons"></Icon>
+                <div slot="content">
+                    <div class="system_phone" style="width:130px">
+                        <p style="font-size:12px;font-weight:600">方法二:推广链接邀请</p>
+                        <p style="margin-top:5px;">
+                            <Input style="width:70%;" v-model="value2" size="small" placeholder="请输入..."></Input>
+                        </p>
+                        <p style="margin-top:5px;">
+                            <Button style="width:70%;" size="small" long v-clipboard:copy="value2" v-clipboard:success="onCopy" v-clipboard:error="onError">
+                                复制</Button>
+                        </p>
+
+                        <p style="margin-top:5px;">好友点击您发送的以上</p>
+                        <p style="margin-top:5px;">邀请码链接完成注册您</p>
+                        <p style="margin-top:5px;">与好友的推荐关系成功</p>
+                    </div>
+                </div>
+            </Tooltip>
+        </li>
+        <!-- 方法三 -->
+        <li class="nav-item d-md-down-none bao">
+            <Tooltip placement="bottom">
+                <Icon type="ios-chatboxes" :size="20" class="icons"></Icon>
+                <div slot="content">
+                    <div class="system_phone" style="width:120px">
+
+                        <p style="margin-top:5px;font-size:12px;font-weight:600">方法三:微信邀请</p>
+                        <div id="qrCode"></div>
+                        <p style="margin-top:5px;">扫一扫分享至朋友圈</p>
+                    </div>
+                </div>
+            </Tooltip>
+        </li>
+        <!-- 方法四 -->
+        <li class="nav-item d-md-down-none bao">
+            <Tooltip placement="bottom">
+                <Icon type="chatbubble-working" class="icons" :size="20"></Icon>
+                <div slot="content" style="width:120px">
+                    <div class="system_phone">
+                        <p style="margin-top:5px;font-size:12px;font-weight:600">方法四:短信邀请</p>
+                        <p style="margin-top:5px;">
+                            <Input style="width:90%" v-model="value2" size="small" placeholder="请输入..."></Input>
+                        </p>
+                        <p style="margin-top:5px;width:100%;">
+                            <Row>
+                                <Col span="16">
+                                <Input v-model="value3" size="small" placeholder="好友手机号"></Input>
+                                </Col>
+                                <Col span="4">
+                                <Button size="small" type="info" @click="send">发送</Button>
+                                </Col>
+                            </Row>
+                        </p>
+                        <p style="margin-top:5px;">好友注册时，填写您</p>
+                        <p style="margin-top:5px;">的推荐人代理码完成</p>
+                        <p style="margin-top:5px;">注册推荐关系即成功</p>
+                    </div>
+                </div>
+            </Tooltip>
+        </li>
     </div>
 </template>
 <script>
 // import axios from 'axios'
-import $ from 'jquery'
-import QRCode  from 'qrcodejs2'
+import $ from "jquery";
+import QRCode from "qrcodejs2";
 // import qs from 'qs'
 export default {
-       
-        data () {
-            return {
-				value1:'002222', 
-				value2:'好友注册，详情点击http://www.yhb118.com',
-				value3:'',
-            }
-            
+    data() {
+        return {
+            value1: "002222",
+            value2: "好友注册，详情点击http://www.yhb118.com",
+            value3: ""
+        };
+    },
+    methods: {
+        Axios() {
+            // console.log('111111111122222222222');
+            var params = new URLSearchParams();
+            // params.append('agentId', 'e555d1ef-f415-417e-878c-edeed4fcd387')
+            let data = {
+                userId: this.$store.getters.uid
+            };
+            this.loading = true;
+            this.$store
+                .dispatch("p_TGSZ", data)
+                .then(reponse => {
+                    this.loading = false;
+                    var res = reponse.result;
+                    this.value1 = res.popularizeCode;
+                    this.value2 = res.popularizeUrl;
+                    this.qrcode();
+                })
+                .catch(error => {
+                    //alert('网络错误')
+                });
         },
-        methods: {
-			Axios(){
-				// console.log('111111111122222222222');
-                var params = new URLSearchParams()
-				// params.append('agentId', 'e555d1ef-f415-417e-878c-edeed4fcd387')
-				let data = {
-					userId:this.$store.getters.uid
-				}
-                this.loading = true;			
-				this.post(process.env.BASE_API+'/agent/PopularizeManage/v1/popularizeSetting',
-					data
-					)
-					.then(reponse=>{
-						this.loading = false;
-						var res = reponse.result;
-						this.value1 = res.popularizeCode
-                        this.value2 = res.popularizeUrl;
-                        this.qrcode() ;
-					})
-					.catch(error=>{
-						//alert('网络错误')
-					})
-			},
-			Axioss(){
-				var params = new URLSearchParams()
-				let data = {
-					userId:this.$store.getters.uid,
-					phone:this.value3,
-					popularizeUrl:this.value2
-				}
-                this.loading = true;			
-				this.post(process.env.BASE_API+'/agent/PopularizeManage/v1/sendSmsPopularize',
-					data
-					)
-					.then(reponse=>{
-						this.loading = false;
-						var res = reponse.result;
-                        console.log(reponse)
-                        this.$Message.success(reponse.message)
-					})
-					.catch(error=>{
-                        this.$Message.error(reponse.message)
-						//alert('网络错误')
-					})
-			},
-            onCopy(e){
-				console.log(e.text);
-			},
-			onError(e){
-				console.log(e)
-			},
-			send(){
-				var popularizeUrl = this.value2;
-				var phone = this.value3;
-				this.Axioss()
-			},
-			qrcode () {  
-				var url = this.value2.substr(this.value2.indexOf('http'))
-				console.log(url)
-				let qrcode = new QRCode('qrCode', {  
-					width: 100,  
-					height: 100, // 高度  
-					text: url // 二维码内容  
-				})  
-				console.log(qrcode)  
-				} 
-		},
-		mounted(){
-			this.Axios();
-		},
+        Axioss() {
+            var params = new URLSearchParams();
+            let data = {
+                userId: this.$store.getters.uid,
+                phone: this.value3,
+                popularizeUrl: this.value2
+            };
+            this.loading = true;
+            this.$store
+                .dispatch("p_DXYQ", data)
+                .then(reponse => {
+                    this.loading = false;
+                    // var res = reponse.result;
+                    console.log(reponse);
+                    this.$Message.success(reponse.message);
+                })
+                .catch(error => {
+                    this.$Message.error(error.message);
+                    //alert('网络错误')
+                });
+        },
+        onCopy(e) {
+            console.log(e.text);
+        },
+        onError(e) {
+            console.log(e);
+        },
+        send() {
+            var popularizeUrl = this.value2;
+            var phone = this.value3;
+            this.Axioss();
+        },
+        qrcode() {
+            var url = this.value2.substr(this.value2.indexOf("http"));
+            console.log(url);
+            let qrcode = new QRCode("qrCode", {
+                width: 100,
+                height: 100, // 高度
+                text: url // 二维码内容
+            });
+            console.log(qrcode);
+        }
+    },
+    mounted() {
+        this.Axios();
     }
+};
 </script>
 
 <style scoped>
-.system_phone{
-	   text-align:center;
-	   padding:10px;
-	   margin: auto
-   }
-   .header-item {
-  width: 6.25rem;
+.system_phone {
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+.header-item {
+    width: 6.25rem;
 
-  height: 52px;
+    height: 52px;
 }
 .nav-link {
     line-height: 3.4375rem;
-  }
+}
 a {
-  color: rgb(218, 212, 212) !important;
+    color: rgb(218, 212, 212) !important;
 }
 
 .topActive {
-  border-bottom: 3px solid #3279d1 !important;
+    border-bottom: 3px solid #3279d1 !important;
 }
 .img-avatar {
-  height: 30px;
-  width: 30px;
+    height: 30px;
+    width: 30px;
 }
-.navbar-nav{
-  padding-left: 20px;
+.navbar-nav {
+    padding-left: 20px;
 }
-.app-header.navbar .nav-item{
-  padding-right:20px ;
+.app-header.navbar .nav-item {
+    padding-right: 20px;
 }
-.nav{
-  padding: 0 !important;
-
+.nav {
+    padding: 0 !important;
 }
 </style>
 <style>
-.bao{
-  float: left;
+.bao {
+    float: left;
 }
 .bao .ivu-tooltip .ivu-tooltip-popper .ivu-tooltip-content .ivu-tooltip-inner {
     max-width: 250px;
     min-height: 34px;
     padding: 8px 12px;
-    color: #000 ;
+    color: #000;
     text-align: left;
     text-decoration: none;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
 }
-.bao:hover .ivu-tooltip>.ivu-tooltip-rel>.icons {
-    color:#4AA4F2
+.bao:hover .ivu-tooltip > .ivu-tooltip-rel > .icons {
+    color: #4aa4f2;
 }
-.icons{
-  color:#fff;
-  cursor:pointer
+.icons {
+    color: #fff;
+    cursor: pointer;
 }
 </style>
 

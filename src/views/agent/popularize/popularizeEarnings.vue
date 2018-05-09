@@ -242,7 +242,7 @@ export default {
                 .then(res => {
                     // /agent/spread/detail
                     this.loading = false;
-                    // console.log(res);
+                    console.log(res);
                     this.data1 = res.result.list;
                     this.ajaxHistoryData = this.data1;
                     this.dataCount = this.data1.length;
@@ -353,13 +353,10 @@ export default {
                 this.showText2 = true;
                 this.showText = true;
                 this.$store
-                    .dispatch(
-                       "p_TGTX",
-                        data
-                    )
+                    .dispatch("p_TGTX", data)
                     .then(reponse => {
                         this.loading = false;
-                        console.log(reponse.code);
+                        console.log(reponse);
                         if (reponse.code == 0) {
                             this.$Message.success("提现成功");
                             setTimeout(() => {

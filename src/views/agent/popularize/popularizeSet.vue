@@ -120,11 +120,12 @@ export default {
                 .dispatch("p_DXYQ", data)
                 .then(reponse => {
                     this.loading = false;
-                    var res = reponse.result;
-                    console.log(res);
+                    // var res = reponse.result;
+                    console.log(reponse);
                     this.$Message.success(reponse.message);
                 })
                 .catch(error => {
+                    console.log(error);
                     this.$Message.error(error.message);
                     //alert('网络错误')
                 });

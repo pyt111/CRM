@@ -139,7 +139,7 @@ export default {
                     },
                     {
                         type: "string",
-                        pattern: /^0?1[3|4|5|8][0-9]\d{8}$/,
+                        pattern: /^0?1[2|3|4|5|6|7|8|9][0-9]\d{8}$/,
                         message: "请输入正确的手机号",
                         trigger: "blur"
                     }
@@ -205,7 +205,7 @@ export default {
                     },
                     {
                         type: "string",
-                        pattern: /^0?1[3|4|5|8][0-9]\d{8}$/,
+                        pattern: /^0?1[2|3|4|5|6|7|8|9][0-9]\d{8}$/,
                         message: "请输入正确的手机号",
                         trigger: "blur"
                     }
@@ -524,10 +524,11 @@ export default {
             };
             // this.loading = true;
             // process.env.BASE_API
-            this.post(process.env.BASE_API + "/agent/getAgentSms", data)
+            this.$store
+                .dispatch("p_BBDX", data)
                 .then(reponse => {
                     this.loading = false;
-                    console.log(reponse.code);
+                    console.log(reponse);
                     const TIME_COUNT = 59;
                     this.spinShow = false;
                     this.$Message.success(reponse.message);
@@ -546,6 +547,7 @@ export default {
                     }
                 })
                 .catch(err => {
+                    console.log(err);
                     this.spinShow = false;
                     this.$Message.error(err.message);
                 });

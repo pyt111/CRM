@@ -11,7 +11,7 @@ const config = {
     actions:{
         /**d提现明细 */
         x_TXMX: async ({commit},data) => {
-            return await API.post(withdrawMoneyDetail,data).catch(error => {})
+            return await API.post(withdrawMoneyDetail,data)
            
         },
      

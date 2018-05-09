@@ -461,7 +461,7 @@ export default {
                 .dispatch("p_BBDX", data)
                 .then(reponse => {
                     this.loading = false;
-                    console.log(reponse.code);
+                    console.log(reponse);
                     if (reponse.code != 0) {
                         this.$Message.info("您已注册");
                     } else {
